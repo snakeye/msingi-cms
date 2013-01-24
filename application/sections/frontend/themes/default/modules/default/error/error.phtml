@@ -1,0 +1,20 @@
+<?php
+$this->title = $this->_('Error');
+?>
+<h1><?= $this->_s('An error occurred: %s', $this->message) ?></h1>
+
+<?php if (isset($this->exception)) : ?>
+	<h2><?= $this->_('Exception information') ?>:</h2>
+	<p>
+		<b><?= $this->_('Message') ?>:</b>
+		<?php echo $this->exception->getMessage() ?>
+	</p>
+
+	<h3><?= $this->_('Stack trace') ?>:</h3>
+	<pre><?php echo $this->exception->getTraceAsString() ?></pre>
+
+	<h3><?= $this->_('Request Parameters') ?>:</h3>
+	<pre><?php echo var_export($this->request->getParams(), true) ?></pre>
+<?php endif; ?>
+
+<?= $this->content ?>
