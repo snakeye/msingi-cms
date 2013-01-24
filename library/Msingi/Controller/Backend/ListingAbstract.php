@@ -1,7 +1,7 @@
 <?php
 
 abstract
-class Msingi_Controller_Backend_ListingAbstract extends Msingi_Controller_BackendAbstract
+class Msingi_Controller_Backend_ListingAbstract extends Msingi_Controller_Backend
 {
 
 	protected $_page_size = 15;
