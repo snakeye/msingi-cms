@@ -3,3 +3,5 @@ config
 tmp
 nbproject
 public/content
+application/sections/backend/themes/gebo
+public/backend/gebo

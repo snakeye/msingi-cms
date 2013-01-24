@@ -82,14 +82,6 @@ class LoginController extends Msingi_Controller
 	}
 
 	/**
-	 * 
-	 */
-	public function logoutAction()
-	{
-
-	}
-
-	/**
 	 *
 	 * @param array $params
 	 * @return \Zend_Auth_Adapter_DbTable
