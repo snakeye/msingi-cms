@@ -9,8 +9,6 @@ class Users_IndexController extends Msingi_Controller_Backend_ListingAbstract
 	public function preDispatch()
 	{
 		parent::preDispatch();
-
-		$this->view->layout()->sidebar = $this->view->partial('_sidebar.phtml');
 	}
 
 	/**

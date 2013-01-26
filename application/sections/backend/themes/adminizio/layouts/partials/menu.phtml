@@ -1,0 +1,9 @@
+<div id="menu" class="box">
+	<ul class="box f-right">
+		<li><a href="<?= $this->section('frontend') ?>"><span><strong><?= $this->_('Visit Site') ?> &raquo;</strong></span></a></li>
+	</ul>
+
+	<?= $this->navigation()->menu()->setMaxDepth(0)->setPartial(array('menu.phtml', 'default'))->render(); ?>
+</div> <!-- /header -->
+
+<hr class="noscreen" />

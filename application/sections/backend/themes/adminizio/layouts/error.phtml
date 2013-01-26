@@ -1,0 +1,25 @@
+<?php
+$this->headLink()->appendStylesheet($this->assets() . '/css/1col.css');
+?>
+<?= $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?= $this->language() ?>" lang="<?= $this->language() ?>">
+	<head>
+		<?= $this->headMeta(); ?>
+		<?= $this->headTitle(); ?>
+		<?= $this->headLink(); ?>
+		<?= $this->headLess(); ?>
+		<?= $this->headStyle(); ?>
+		<?= $this->headScript(); ?>
+	</head>
+	<body class="error">
+		<div id="main">
+			<div id="cols" class="box">
+				<div id="content" class="box">
+					<?= $this->layout()->content ?>
+				</div>
+			</div>
+
+			<?= $this->partial('partials/footer.phtml') ?>
+		</div>
+	</body>
+</html>

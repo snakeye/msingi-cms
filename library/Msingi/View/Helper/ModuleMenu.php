@@ -28,7 +28,7 @@ class Msingi_View_Helper_ModuleMenu extends Zend_View_Helper_Abstract
 			$menuContainer = new Zend_Navigation($menuConfig);
 
 			//
-			return $this->view->navigation($menuContainer);
+			return $menuContainer;
 		}
 
 		return null;
@@ -41,6 +41,9 @@ class Msingi_View_Helper_ModuleMenu extends Zend_View_Helper_Abstract
 	public function _($string)
 	{
 		$translator = $this->getTranslator();
+		if ($translator == null)
+			return $string;
+
 		return $translator->_($string);
 	}
 

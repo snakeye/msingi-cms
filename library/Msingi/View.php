@@ -55,6 +55,9 @@ class Msingi_View extends Zend_View implements Msingi_Translator
 	public function translate($string)
 	{
 		$translator = $this->getTranslator();
+		if ($translator == null)
+			return $string;
+
 		return $translator->translate($string);
 	}
 
@@ -102,10 +105,6 @@ class Msingi_View extends Zend_View implements Msingi_Translator
 					{
 						$this->_translator = $translator->getAdapter();
 					}
-				}
-				else
-				{
-					$this->_translator = new Msingi_Translator_Dummy();
 				}
 			}
 			else

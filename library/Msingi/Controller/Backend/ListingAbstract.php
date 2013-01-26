@@ -4,19 +4,25 @@ abstract
 class Msingi_Controller_Backend_ListingAbstract extends Msingi_Controller_Backend
 {
 
+	//
 	protected $_page_size = 15;
 
 	/**
+	 *
 	 * @return Msingi_Db_Table
 	 */
 	abstract protected function getTable();
 
 	/**
+	 *
 	 * @return Msingi_Form
 	 */
 	abstract protected function getEditForm();
 
 	/**
+	 *
+	 * @param $rquest
+	 * @param $filter
 	 * @return query object
 	 */
 	abstract protected function getPaginatorQuery($request, $filter);

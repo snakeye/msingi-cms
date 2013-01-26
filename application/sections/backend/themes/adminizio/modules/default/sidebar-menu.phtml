@@ -1,0 +1,12 @@
+<?php foreach ($this->container as $page) : ?>
+	<?php if ($page->isVisible()) : ?>
+		<li <?php if ($page->isActive(true)) echo 'class="submenu-active"' ?>>
+			<a href="<?= $page->getHref() ?>"><span><?= $page->getLabel() ?></span></a>
+			<?php if ($page->hasPages()) : ?>
+				<ul>
+					<?= $this->partial('sidebar-menu.phtml', 'default', array('container' => $page)) ?>
+				</ul>
+			<?php endif; ?>
+		</li>
+	<?php endif; ?>
+<?php endforeach; ?>
