@@ -38,6 +38,9 @@ class Msingi_Application_Resource_Sections extends Zend_Application_Resource_Res
 
 			// bootstrap current section
 			$this->bootstrapSection($sections->getCurrentSection());
+
+			// 
+			Zend_Registry::set('CurrentSection', $sections->getCurrentSection());
 		}
 
 		return $this->_sections;

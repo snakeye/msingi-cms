@@ -18,7 +18,6 @@ class Msingi_View_Helper_Assets extends Zend_View_Helper_Abstract
 			throw new Zend_Exception('Resource Sections not found');
 		}
 
-		//
 		$site = Zend_Registry::get('Sections');
 
 		// get current site section
@@ -28,11 +27,10 @@ class Msingi_View_Helper_Assets extends Zend_View_Helper_Abstract
 		$assets_url = $currentSection->assets();
 
 		//
-		$settings = Msingi_Model_Settings::getInstance();
-		$theme = $settings->get('section:' . $currentSection->name() . ':appearance:theme', 'default');
+		$theme = Zend_Registry::get('Theme');
 
 		//
-		$assets_url .= '/' . $theme;
+		$assets_url .= '/' . $theme->name();
 
 		//
 		if ($subdir != '')

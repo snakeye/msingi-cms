@@ -1,7 +1,9 @@
 library/Zend
-config
+config/app.ini
 tmp
 nbproject
 public/content
-application/sections/backend/themes/gebo
 public/backend/gebo
+public/frontend/nevia
+application/sections/backend/themes/gebo
+application/sections/frontend/themes/nevia

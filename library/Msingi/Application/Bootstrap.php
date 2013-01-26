@@ -32,9 +32,27 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	}
 
 	/**
+	 *
+	 */
+	protected function _initPluginCache()
+	{
+		$this->bootstrap(array('Dir'));
+
+		$dir = $this->getResource('Dir');
+
+		$classFileIncCache = $dir->temp . '/pluginLoaderCache.php';
+		if (file_exists($classFileIncCache))
+		{
+			include_once $classFileIncCache;
+		}
+
+		Zend_Loader_PluginLoader::setIncludeFileCache($classFileIncCache);
+	}
+
+	/**
 	 * Application Settings
 	 *
-	 * @return type
+	 * @return Msingi_Model_Settings
 	 */
 	protected function _initSettings()
 	{
@@ -84,6 +102,26 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
 	/**
 	 *
+	 * @return \Msingi_View
+	 */
+	protected function _initView()
+	{
+		$view = new Msingi_View($this->getOptions());
+
+		// msingi view helpers
+		$view->addHelperPath('Msingi/View/Helper', 'Msingi_View_Helper_');
+		// application view helpers
+		$view->addHelperPath('View/Helper', 'View_Helper_');
+
+		// Add it to the ViewRenderer
+		$viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
+		$viewRenderer->setView($view);
+
+		return $view;
+	}
+
+	/**
+	 *
 	 * Enter description here ...
 	 */
 	protected function _initRequest()
@@ -120,7 +158,9 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$response = new Msingi_Controller_Response();
 
 		// set cache controll options
-		$response->setCacheControl($settings->get('performance:html:cache_control_enabled', false), $settings->get('performance:html:cache_control_lifetime', 0));
+		$cache_control_enabled = $settings->get('performance:html:cache_control_enabled', false);
+		$cache_control_lifetime = $settings->get('performance:html:cache_control_lifetime', 0);
+		$response->setCacheControl($cache_control_enabled, $cache_control_lifetime);
 
 		//
 		$front->setResponse($response);
@@ -159,66 +199,75 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
 	/**
 	 *
+	 */
+	protected function _initTheme()
+	{
+		$this->bootstrap('Sections', 'Settings', 'View');
+		$sections = $this->getResource('Sections');
+
+		// get current section
+		$currentSection = $sections->getCurrentSection();
+
+		// settings
+		$settings = Msingi_Model_Settings::getInstance();
+
+		//
+		$theme_name = $settings->get('section:' . $currentSection->name() . ':appearance:theme', 'default');
+
+		// create theme
+		$theme = new Msingi_Theme($theme_name);
+
+		// store theme in registry
+		Zend_Registry::set('Theme', $theme);
+
+		//
+		$view = $this->getResource('View');
+
+		//
+		$theme_path = sprintf('%s/sections/%s/themes/%s/', APPLICATION_PATH, $currentSection->name(), $theme->name());
+
+		if (file_exists($theme_path . '/Theme.php'))
+		{
+			include_once $theme_path . '/Theme.php';
+
+			//
+			$name = strtolower('Theme ' . $theme->name());
+			$name = str_replace(array('-', '.'), ' ', $name);
+			$name = ucwords($name);
+			$name = str_replace(' ', '', $name);
+
+			//
+			if (class_exists($name))
+			{
+				$theme_bootstrap = new $name();
+				$theme_bootstrap->init($view);
+			}
+		}
+
+		return $theme;
+	}
+
+	/**
+	 *
 	 * @return type
 	 */
 	protected function _initLayout()
 	{
-		$this->bootstrap('Sections', 'Settings');
+		$this->bootstrap('Sections', 'Settings', 'Theme');
 		$sections = $this->getResource('Sections');
+		$theme = $this->getResource('Theme');
 
 		$currentSection = $sections->getCurrentSection();
 
 		$layout = Zend_Layout::startMvc();
 
-		$settings = Msingi_Model_Settings::getInstance();
-
-		$theme = $settings->get('section:' . $currentSection->name() . ':appearance:theme', 'default');
-
-		$layoutsPath = sprintf('%s/sections/%s/themes/%s/layouts', APPLICATION_PATH, $currentSection->name(), $theme);
+		$layoutsPath = sprintf('%s/sections/%s/themes/%s/layouts', APPLICATION_PATH, $currentSection->name(), $theme->name());
 
 		$layout->setLayoutPath($layoutsPath);
 
 		$layout->setLayout('default');
 
 		return $layout;
-	}
-
-	/**
-	 *
-	 * @return \Msingi_View
-	 */
-	protected function _initView()
-	{
-		$view = new Msingi_View($this->getOptions());
-
-		// msingi view helpers
-		$view->addHelperPath('Msingi/View/Helper', 'Msingi_View_Helper_');
-		// application view helpers
-		$view->addHelperPath('View/Helper', 'View_Helper_');
-
-		// Add it to the ViewRenderer
-		$viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
-		$viewRenderer->setView($view);
-
-		return $view;
-	}
-
-	/**
-	 *
-	 */
-	protected function _initPluginCache()
-	{
-		$this->bootstrap(array('Dir'));
-
-		$dir = $this->getResource('Dir');
-
-		$classFileIncCache = $dir->temp . '/pluginLoaderCache.php';
-		if (file_exists($classFileIncCache))
-		{
-			include_once $classFileIncCache;
-		}
-
-		Zend_Loader_PluginLoader::setIncludeFileCache($classFileIncCache);
 	}
 
 }

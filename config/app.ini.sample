@@ -1,0 +1,48 @@
+[production]
+phpSettings.display_startup_errors = 0
+phpSettings.display_errors = 0
+
+; debug
+resources.debug.enabled = true
+
+; logs
+resources.log.enabled = true
+resources.log.file = /var/www/msingi-cms/logs/application.log
+
+; local paths
+resources.dir.temp = /var/www/msingi-cms/tmp
+resources.dir.log = /var/www/msingi-cms/logs
+
+; database
+resources.db.adapter = PDO_MYSQL
+resources.db.params.host = localhost
+resources.db.params.username = dev
+resources.db.params.password =
+resources.db.params.dbname = msingi-cms
+resources.db.params.charset = utf8
+
+; cache
+resources.cache.engine = File
+resources.cache.file.dir = /var/www/msingi-cms/tmp/cache
+resources.cache.lifetime = 15
+resources.cache.prefix = hl_
+
+; Sections
+resources.sections.frontend.root = http://msingi-cms.dev
+resources.sections.frontend.aliases = www.msingi-cms.dev, msingi-cms.dev
+resources.sections.frontend.assets = http://msingi-cms.dev/frontend
+
+resources.sections.backend.root = http://backend.msingi-cms.dev
+resources.sections.backend.assets = http://backend.msingi-cms.dev/backend
+
+; Content
+resources.content.url = http://msingi-cms.dev/content
+resources.content.dir = /var/www/msingi-cms/public/content
+
+[development : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+
+[testing : production]
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
