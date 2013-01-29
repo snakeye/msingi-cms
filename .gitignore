@@ -1,6 +1,7 @@
 library/Zend
 config/app.ini
 tmp
+logs
 nbproject
 public/content
 public/backend/gebo
