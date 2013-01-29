@@ -113,18 +113,6 @@ class Settings_IndexController extends Msingi_Controller_Backend_Settings
 				)
 			),
 			array(
-				'label' => $this->_('Contacts'),
-				'icon' => 'icon-info-sign',
-				'settings' => array(
-					array(
-						'name' => 'contacts_phone',
-						'label' => $this->_('Phone'),
-						'setting' => 'contacts:phone',
-						'type' => 'string',
-					),
-				)
-			),
-			array(
 				'label' => $this->_('Google Analytics'),
 				'icon' => 'icon-info-sign',
 				'settings' => array(
@@ -158,7 +146,7 @@ class Settings_IndexController extends Msingi_Controller_Backend_Settings
 			$section_id = intval($rq->get('section'));
 		}
 
-		//$this->view->layout()->sidebar = $this->view->partial('_sidebar.phtml', array('settings' => $this->_settings, 'current' => $section_id));
+		$this->view->layout()->sidebar = $this->view->partial('_sidebar.phtml', array('settings' => $this->_settings, 'current' => $section_id));
 	}
 
 }

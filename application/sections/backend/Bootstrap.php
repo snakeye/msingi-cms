@@ -28,12 +28,15 @@ class Backend_Bootstrap extends Msingi_Application_Section_Bootstrap
 
 		$acl->addResource(new Zend_Acl_Resource('menu.index'));
 		$acl->addResource(new Zend_Acl_Resource('widgets.index'));
+		$acl->addResource(new Zend_Acl_Resource('themes.index'));
 
 		// management
 		$acl->addResource(new Zend_Acl_Resource('manage'));
 
 		$acl->addResource(new Zend_Acl_Resource('settings.index'));
 		$acl->addResource(new Zend_Acl_Resource('users.index'));
+		$acl->addResource(new Zend_Acl_Resource('dictionaries.index'));
+		$acl->addResource(new Zend_Acl_Resource('translations.index'));
 
 		// moderator acl
 		$acl->allow('moderator', 'default.index');

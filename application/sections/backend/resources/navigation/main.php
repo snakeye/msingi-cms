@@ -78,6 +78,13 @@ $menu[] = array(
 			'action' => 'index',
 			'resource' => 'widgets.index',
 		),
+		array(
+			'label' => $this->_('Themes'),
+			'module' => 'themes',
+			'controller' => 'index',
+			'action' => 'index',
+			'resource' => 'themes.index',
+		),
 	),
 );
 
@@ -100,6 +107,20 @@ $menu[] = array(
 			'controller' => 'index',
 			'action' => 'index',
 			'resource' => 'users.index',
+		),
+		array(
+			'label' => $this->_('Dictionaries'),
+			'module' => 'dictionaries',
+			'controller' => 'index',
+			'action' => 'index',
+			'resource' => 'dictionaries.index',
+		),
+		array(
+			'label' => $this->_('Translations'),
+			'module' => 'translations',
+			'controller' => 'index',
+			'action' => 'index',
+			'resource' => 'translations.index',
 		),
 	),
 );

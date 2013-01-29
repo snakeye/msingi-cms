@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS `auth_backend` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
@@ -9,6 +8,10 @@ CREATE TABLE IF NOT EXISTS `auth_backend` (
   PRIMARY KEY (`id`),
   KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `auth_backend` (`id`, `username`, `password`, `role`, `name`, `email`) VALUES
+(1, 'admin', 'a3cfffd4012ef24e3f07903e4a8894e3', 'admin', 'Administrator', 'admin@example.com');
+
 
 CREATE TABLE IF NOT EXISTS `dictionary` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -67,6 +70,10 @@ CREATE TABLE IF NOT EXISTS `pages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+INSERT INTO `pages` (`id`, `parent_id`, `can_delete`, `type`, `path`, `template_id`) VALUES
+(1, NULL, 0, 'request', 'default:index:index', 1);
+
+
 CREATE TABLE IF NOT EXISTS `pages_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
@@ -106,6 +113,29 @@ CREATE TABLE IF NOT EXISTS `settings` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `settings` (`id`, `name`, `value`) VALUES
+(1, 'section:backend:appearance:theme', 'gebo'),
+(2, 'section:frontend:appearance:theme', 'nevia'),
+(3, 'application:name', 'Msingi CMS'),
+(4, 'application:tagline', 'Zend Framework based CMS'),
+(5, 'application:timezone', 'Europe/Prague'),
+(6, 'application:admin_email', 'admin@example.com'),
+(7, 'mailer:default:from', 'noreply@example.com'),
+(8, 'mailer:default:send', '1'),
+(9, 'mailer:default:log', '0'),
+(10, 'section:frontend:languages:type', 'single'),
+(11, 'section:frontend:languages:default', 'en'),
+(12, 'section:frontend:languages:enabled', 'a:1:{i:0;s:2:"en";}'),
+(13, 'section:backend:languages:type', 'single'),
+(14, 'section:backend:languages:default', 'en'),
+(15, 'section:backend:languages:enabled', 'a:1:{i:0;s:2:"en";}'),
+(16, 'performance:html:minify', ''),
+(17, 'performance:html:conditional', '1'),
+(18, 'performance:html:cache_control', '1'),
+(19, 'performance:html:cache_timeout', '300'),
+(20, 'google:analytics:id', '');
+
 
 CREATE TABLE IF NOT EXISTS `widgets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
