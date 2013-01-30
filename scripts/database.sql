@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `cms_pages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `pages` (`id`, `parent_id`, `can_delete`, `type`, `path`, `template_id`) VALUES
+INSERT INTO `cms_pages` (`id`, `parent_id`, `can_delete`, `type`, `path`, `template_id`) VALUES
 (1, NULL, 0, 'request', 'default:index:index', 1);
 
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `cms_page_templates` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `settings` (
+CREATE TABLE IF NOT EXISTS `cms_settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `value` text COLLATE utf8_unicode_ci NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `settings` (`id`, `name`, `value`) VALUES
+INSERT INTO `cms_settings` (`id`, `name`, `value`) VALUES
 (1, 'section:backend:appearance:theme', 'gebo'),
 (2, 'section:frontend:appearance:theme', 'nevia'),
 (3, 'application:name', 'Msingi CMS'),
@@ -149,5 +149,5 @@ CREATE TABLE IF NOT EXISTS `cms_users` (
   KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `auth_backend` (`id`, `username`, `password`, `role`, `name`, `email`) VALUES
+INSERT INTO `cms_users` (`id`, `username`, `password`, `role`, `name`, `email`) VALUES
 (1, 'admin', 'a3cfffd4012ef24e3f07903e4a8894e3', 'admin', 'Administrator', 'admin@example.com');

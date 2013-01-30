@@ -1,6 +1,6 @@
 <?php
 
-class News_IndexController extends Msingi_Controller_Backend_ListingAbstract
+class Articles_IndexController extends Msingi_Controller_Backend_ListingAbstract
 {
 
 	protected function getEditForm()
@@ -22,7 +22,7 @@ class News_IndexController extends Msingi_Controller_Backend_ListingAbstract
 
 	protected function getTable()
 	{
-		return Articles::getInstance();
+		return Cms_Articles::getInstance();
 	}
 
 }

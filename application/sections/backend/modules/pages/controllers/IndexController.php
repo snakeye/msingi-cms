@@ -33,7 +33,7 @@ class Pages_IndexController extends Msingi_Controller_Backend
 		$this->view->form = $form;
 
 		// sidebar
-		//$this->view->layout()->sidebar = $this->view->partial('pages/_sidebar.phtml', array('root' => $root, 'current_page' => $page));
+		$this->view->layout()->sidebar = $this->view->partial('index/_sidebar.phtml', array('root' => $root, 'current_page' => $page));
 	}
 
 	/**
@@ -101,7 +101,7 @@ class Pages_IndexController extends Msingi_Controller_Backend
 			}
 		}
 
-		return $this->_helper->redirector('index', 'pages', 'default', array('id' => $page->id));
+		return $this->_helper->redirector('index', 'index', 'pages', array('id' => $page->id));
 	}
 
 	/**
@@ -124,14 +124,14 @@ class Pages_IndexController extends Msingi_Controller_Backend
 				'can_delete' => 1,
 				'type' => 'path',
 				'path' => $route,
-				));
+					));
 
 			$page->save();
 
-			return $this->_helper->redirector('index', 'pages', 'default', array('id' => $page->id));
+			return $this->_helper->redirector('index', 'index', 'pages', array('id' => $page->id));
 		}
 
-		return $this->_helper->redirector('index', 'pages', 'default');
+		return $this->_helper->redirector('index', 'index', 'pages');
 	}
 
 	/**
@@ -153,7 +153,7 @@ class Pages_IndexController extends Msingi_Controller_Backend
 			$page->delete();
 		}
 
-		return $this->_helper->redirector('index', 'pages', 'default');
+		return $this->_helper->redirector('index', 'index', 'pages');
 	}
 
 	/**

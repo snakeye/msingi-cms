@@ -8,7 +8,7 @@ class Form_Page extends Msingi_Form_Tabs
 	 */
 	public function init()
 	{
-		$this->setAction('/pages/save');
+		$this->setAction('/pages/index/save');
 		$this->setMethod('post');
 
 		$this->addElement('hidden', 'id');
@@ -33,7 +33,7 @@ class Form_Page extends Msingi_Form_Tabs
 				'label' => $this->_('Title'),
 				'class' => 'span12',
 				'filters' => array('StringTrim', 'StripTags'),
-				));
+					));
 
 			$elements[] = $title;
 
@@ -47,7 +47,7 @@ class Form_Page extends Msingi_Form_Tabs
 						'rows' => 10,
 						'class' => 'wysiwyg',
 						'filters' => array('StringTrim', new Form_Filter_PageTags()),
-						));
+							));
 
 					$elements[] = $content;
 				}
@@ -57,7 +57,7 @@ class Form_Page extends Msingi_Form_Tabs
 				'label' => $this->_('Meta keywords'),
 				'class' => 'span12',
 				'filters' => array('StringTrim', 'StripTags'),
-				));
+					));
 
 			$elements[] = $meta_keywords;
 
@@ -65,7 +65,7 @@ class Form_Page extends Msingi_Form_Tabs
 				'label' => $this->_('Meta description'),
 				'class' => 'span12',
 				'filters' => array('StringTrim', 'StripTags'),
-				));
+					));
 
 			$elements[] = $meta_description;
 
@@ -79,11 +79,11 @@ class Form_Page extends Msingi_Form_Tabs
 		$path = $this->createElement('text', 'path', array(
 			'label' => $this->_('Path'),
 			'filters' => array('StringTrim', 'StripTags'),
-			));
+				));
 
 		$template_id = $this->createElement('select', 'template_id', array(
 			'label' => $this->_('Template'),
-			));
+				));
 
 		$page_templates = new Msingi_Model_Pages_TemplatesTable();
 		$template_id->addMultiOptions(array(null => ''));
@@ -103,7 +103,7 @@ class Form_Page extends Msingi_Form_Tabs
 		$submit = $this->createElement('submit', 'submit', array(
 			'label' => $this->_('Save'),
 			'class' => 'btn btn-primary',
-			));
+				));
 
 		$this->addElement($submit);
 

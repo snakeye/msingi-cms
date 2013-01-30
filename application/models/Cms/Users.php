@@ -1,10 +1,10 @@
 <?php
 
-class Backend_Auth extends Msingi_Db_Table
+class Cms_Users extends Msingi_Db_Table
 {
 
-	protected $_name = 'auth_backend';
-	protected $_rowClass = 'Backend_AuthRow';
+	protected $_name = 'cms_users';
+	protected $_rowClass = 'Cms_User';
 
 	const SALT = 'Msingi_Backend';
 

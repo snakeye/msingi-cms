@@ -31,11 +31,12 @@ class Menu_IndexController extends Msingi_Controller_Backend
 		$this->view->menu = $menu;
 
 		// sidebar
-//		$this->view->layout()->sidebar = $this->view->partial('menu/_sidebar.phtml', array(
-//			'menus' => $this->getMenus(),
-//			'current_menu' => $menu,
-//			'root' => $pages->fetchRoot()
-//			));
+		$this->view->layout()->sidebar = $this->view->partial('index/_sidebar.phtml', array(
+			'menus' => $this->getMenus(),
+			'current_menu' => $menu,
+			'root' => $pages->fetchRoot()
+				)
+		);
 	}
 
 	/**
@@ -47,7 +48,7 @@ class Menu_IndexController extends Msingi_Controller_Backend
 
 		$rq = $this->getRequest();
 
-		$menus_table = new Cms_MenuTable();
+		$menus_table = new Cms_MenuItems();
 
 		$this->view->language = $rq->get('language');
 		$this->view->menu = $menus_table->fetchTree($rq->get('name'));
@@ -64,7 +65,7 @@ class Menu_IndexController extends Msingi_Controller_Backend
 
 		$rq = $this->getRequest();
 
-		$menus_table = new Cms_MenuTable();
+		$menus_table = new Cms_MenuItems();
 
 		$menus_table->sortMenu($rq->get('menu'), $rq->get('menu-item'));
 
@@ -81,7 +82,7 @@ class Menu_IndexController extends Msingi_Controller_Backend
 
 		$rq = $this->getRequest();
 
-		$menus_table = new Cms_MenuTable();
+		$menus_table = new Cms_MenuItems();
 
 		$item = $menus_table->fetchById($rq->get('id'));
 		if ($item != null)
@@ -107,13 +108,13 @@ class Menu_IndexController extends Msingi_Controller_Backend
 		$page = $pages->fetchById($rq->get('id'));
 		if ($page != null)
 		{
-			$menus_table = new Cms_MenuTable();
+			$menus_table = new Cms_MenuItems();
 			$item = $menus_table->createRow(array(
 				'parent_id' => null,
 				'name' => $rq->get('menu'),
 				'order' => 0,
 				'uri' => $page->getMenuUrl(),
-				));
+					));
 
 			$item->save();
 		}
@@ -130,7 +131,7 @@ class Menu_IndexController extends Msingi_Controller_Backend
 
 		$rq = $this->getRequest();
 
-		$menus_table = new Cms_MenuTable();
+		$menus_table = new Cms_MenuItems();
 
 		$this->view->item = $menus_table->fetchById($rq->get('id'));
 		$this->view->language = $rq->get('language');
@@ -149,7 +150,7 @@ class Menu_IndexController extends Msingi_Controller_Backend
 
 		$values = $rq->getPost();
 
-		$menus_table = new Cms_MenuTable();
+		$menus_table = new Cms_MenuItems();
 
 		$item = $menus_table->fetchById($values['id']);
 		if ($item != null)

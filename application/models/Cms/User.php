@@ -1,6 +1,6 @@
 <?php
 
-class Backend_AuthRow extends Msingi_Db_Table_Row
+class Cms_User extends Msingi_Db_Table_Row
 {
 
 	/**
@@ -13,7 +13,7 @@ class Backend_AuthRow extends Msingi_Db_Table_Row
 
 		if (isset($data['password1']) && $data['password1'] != '' && $data['password1'] == $data['password2'])
 		{
-			$this->password = md5(Auth_Backend::SALT . $data['password1']);
+			$this->password = md5(Cms_Users::SALT . $data['password1']);
 		}
 	}
 

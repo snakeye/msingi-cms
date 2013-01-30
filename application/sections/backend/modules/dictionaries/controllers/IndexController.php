@@ -56,7 +56,7 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 				}
 			}
 
-			return $this->_helper->redirector('index', 'dictionaries', 'default', array('dictionary' => $type));
+			return $this->_helper->redirector('index', 'index', 'dictionaries', array('dictionary' => $type));
 		}
 		else
 		{
@@ -69,14 +69,14 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 			$current = $this->_dictionaries[$type];
 		}
 
-		$this->view->languages = Msingi_Application_Settings::getInstance()->getArray('multilanguage:languages');
+		$this->view->languages = Msingi_Model_Settings::getInstance()->getArray('multilanguage:languages');
 
 		$this->view->type = $type;
 		$this->view->items = $dictionary->fetchLabels($type);
 
 		$this->view->dictionary_label = $current['label'];
 
-		$this->view->layout()->sidebar = $this->view->partial('dictionaries/_sidebar.phtml', array('dictionaries' => $this->_dictionaries));
+		$this->view->layout()->sidebar = $this->view->partial('index/_sidebar.phtml', array('dictionaries' => $this->_dictionaries));
 	}
 
 	/**
@@ -87,13 +87,13 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 		$rq = $this->getRequest();
 
 		if (!$rq->isPost())
-			return $this->_helper->redirector('index', 'dictionaries', 'default');
+			return $this->_helper->redirector('index', 'index', 'dictionaries');
 
 		$post = $rq->getPost();
 
 		$type = trim($post['type']);
 		if (!isset($this->_dictionaries[$type]))
-			return $this->_helper->redirector('index', 'dictionaries', 'default');
+			return $this->_helper->redirector('index', 'index', 'dictionaries');
 
 		$name = trim(strip_tags($post['name']));
 		$name = preg_replace('/[^a-z0-9]/i', '', $name);
@@ -106,19 +106,20 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 			$row = $dictionary->fetchRow(array(
 				'type = ?' => $type,
 				'name = ?' => $name
-				));
+					));
 
 			if ($row == null)
 			{
 				$row = $dictionary->createRow(array(
 					'type' => $type,
 					'name' => $name,
-					));
+						)
+				);
 
 				$row->save();
 			}
 		}
-		return $this->_helper->redirector('index', 'dictionaries', 'default', array('dictionary' => $type));
+		return $this->_helper->redirector('index', 'index', 'dictionaries', array('dictionary' => $type));
 	}
 
 	/**
@@ -137,8 +138,9 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 
 			$row = $dictionary->fetchRow(array(
 				'type = ?' => $type,
-				'name = ?' => $name
-				));
+				'name = ?' => $name,
+					)
+			);
 
 			if ($row != null)
 			{
@@ -146,7 +148,7 @@ class Dictionaries_IndexController extends Msingi_Controller_Backend
 			}
 		}
 
-		return $this->_helper->redirector('index', 'dictionaries', 'default', array('dictionary' => $type));
+		return $this->_helper->redirector('index', 'index', 'dictionaries', array('dictionary' => $type));
 	}
 
 }

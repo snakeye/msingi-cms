@@ -88,7 +88,7 @@ class LoginController extends Msingi_Controller
 	 */
 	public function getAuthAdapter(array $params)
 	{
-		$table = Backend_Auth::getInstance();
+		$table = Cms_Users::getInstance();
 
 		$authAdapter = new Zend_Auth_Adapter_DbTable($table->getAdapter());
 		$authAdapter->setTableName('cms_users');
@@ -97,7 +97,7 @@ class LoginController extends Msingi_Controller
 		$authAdapter->setIdentity($params['username']);
 
 		$authAdapter->setCredentialColumn('password');
-		$authAdapter->setCredential(md5(Backend_Auth::getSalt() . $params['password']));
+		$authAdapter->setCredential(md5(Cms_Users::getSalt() . $params['password']));
 
 		return $authAdapter;
 	}

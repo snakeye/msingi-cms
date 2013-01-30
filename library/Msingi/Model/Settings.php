@@ -4,14 +4,14 @@
  * Application options
  *
  * @package Msingi
- * @author Spectraweb s.r.o.
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Model_Settings extends Msingi_Db_Table
 {
 
-	//
-	protected $_name = 'settings';
-	//
+	// table name
+	protected $_name = 'cms_settings';
+	// default values
 	protected $_defaults;
 
 	/**
@@ -129,7 +129,7 @@ class Msingi_Model_Settings extends Msingi_Db_Table
 		{
 			$row = $this->createRow(array(
 				'name' => $name,
-				));
+					));
 		}
 
 		$row->value = $value;

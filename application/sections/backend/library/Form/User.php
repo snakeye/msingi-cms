@@ -8,7 +8,7 @@ class Form_User extends Msingi_Form
 
 	public function init()
 	{
-		$this->setAction('/admins/edit');
+		$this->setAction('/users/index/edit');
 		$this->setMethod('post');
 
 		$id = $this->createElement('hidden', 'id');

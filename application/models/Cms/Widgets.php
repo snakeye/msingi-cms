@@ -3,7 +3,7 @@
 class Cms_Widgets extends Msingi_Db_Table_Multilanguage
 {
 
-	protected $_name = 'widgets';
+	protected $_name = 'cms_widgets';
 	protected $_rowClass = 'Cms_Widget';
 
 	//protected $_dependentTables = array('Widgets_Texts');

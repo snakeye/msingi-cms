@@ -18,7 +18,7 @@ class Backend_Bootstrap extends Msingi_Application_Section_Bootstrap
 		// content
 		$acl->addResource(new Zend_Acl_Resource('content'));
 
-		$acl->addResource(new Zend_Acl_Resource('news.index'));
+		$acl->addResource(new Zend_Acl_Resource('articles.index'));
 		$acl->addResource(new Zend_Acl_Resource('pages.index'));
 		$acl->addResource(new Zend_Acl_Resource('images.index'));
 		$acl->addResource(new Zend_Acl_Resource('files.index'));

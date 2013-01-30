@@ -32,7 +32,7 @@ class Users_IndexController extends Msingi_Controller_Backend_ListingAbstract
 	 */
 	protected function getTable()
 	{
-		return new Backend_Auth();
+		return new Cms_Users();
 	}
 
 	/**

@@ -33,7 +33,7 @@ class Cms_Dictionaries extends Msingi_Db_Table
 	public function fetchLabels($type)
 	{
 		$select = $this->select()->from($this, array('id', 'name'))
-			->joinLeft('dictionary_labels', 'row_id = dictionary.id', array('language', 'label'))
+			->joinLeft('cms_dictionary_labels', 'row_id = cms_dictionary.id', array('language', 'label'))
 			->where('type = ?', $type)
 			->setIntegrityCheck(false);
 

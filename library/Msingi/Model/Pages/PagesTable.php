@@ -3,7 +3,7 @@
 class Msingi_Model_Pages_PagesTable extends Msingi_Db_Table_Multilanguage
 {
 
-	protected $_name = 'pages';
+	protected $_name = 'cms_pages';
 	protected $_rowClass = 'Msingi_Model_Pages_Page';
 	protected $_dependentTables = array('Msingi_Model_Pages_SectionsTable');
 

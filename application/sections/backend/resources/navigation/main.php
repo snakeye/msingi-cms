@@ -20,10 +20,10 @@ $menu[] = array(
 	'pages' => array(
 		array(
 			'label' => $this->_('Blog/news'),
-			'module' => 'news',
+			'module' => 'articles',
 			'controller' => 'index',
 			'action' => 'index',
-			'resource' => 'news.index',
+			'resource' => 'articles.index',
 		),
 		array(
 			'label' => $this->_('Pages'),
@@ -107,6 +107,15 @@ $menu[] = array(
 			'controller' => 'index',
 			'action' => 'index',
 			'resource' => 'users.index',
+			'pages' => array(
+				array(
+					'visible' => false,
+					'module' => 'users',
+					'controller' => 'index',
+					'action' => 'edit',
+					'resource' => 'users.index',
+				),
+			),
 		),
 		array(
 			'label' => $this->_('Dictionaries'),
