@@ -1,19 +1,5 @@
-CREATE TABLE IF NOT EXISTS `auth_backend` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `password` char(32) COLLATE utf8_unicode_ci NOT NULL,
-  `role` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `auth_backend` (`id`, `username`, `password`, `role`, `name`, `email`) VALUES
-(1, 'admin', 'a3cfffd4012ef24e3f07903e4a8894e3', 'admin', 'Administrator', 'admin@example.com');
-
-
-CREATE TABLE IF NOT EXISTS `dictionary` (
+CREATE TABLE IF NOT EXISTS `cms_dictionary` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -21,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `dictionary` (
   KEY `type` (`type`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `dictionary_labels` (
+CREATE TABLE IF NOT EXISTS `cms_dictionary_labels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `row_id` int(11) NOT NULL,
   `language` char(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -29,14 +15,14 @@ CREATE TABLE IF NOT EXISTS `dictionary_labels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `images` (
+CREATE TABLE IF NOT EXISTS `cms_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `dt` datetime NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `menu` (
+CREATE TABLE IF NOT EXISTS `cms_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -45,14 +31,14 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `menus` (
+CREATE TABLE IF NOT EXISTS `cms_menus` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `menu_texts` (
+CREATE TABLE IF NOT EXISTS `cms_menu_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
   `language` char(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -60,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `menu_texts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `pages` (
+CREATE TABLE IF NOT EXISTS `cms_pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
   `can_delete` tinyint(1) NOT NULL DEFAULT '1',
@@ -74,7 +60,7 @@ INSERT INTO `pages` (`id`, `parent_id`, `can_delete`, `type`, `path`, `template_
 (1, NULL, 0, 'request', 'default:index:index', 1);
 
 
-CREATE TABLE IF NOT EXISTS `pages_texts` (
+CREATE TABLE IF NOT EXISTS `cms_pages_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
   `language` char(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -84,14 +70,14 @@ CREATE TABLE IF NOT EXISTS `pages_texts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `page_sections` (
+CREATE TABLE IF NOT EXISTS `cms_page_sections` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `page_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `page_sections_texts` (
+CREATE TABLE IF NOT EXISTS `cms_page_sections_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
   `language` char(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -99,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `page_sections_texts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `page_templates` (
+CREATE TABLE IF NOT EXISTS `cms_page_templates` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `sections` text COLLATE utf8_unicode_ci NOT NULL,
@@ -137,17 +123,31 @@ INSERT INTO `settings` (`id`, `name`, `value`) VALUES
 (20, 'google:analytics:id', '');
 
 
-CREATE TABLE IF NOT EXISTS `widgets` (
+CREATE TABLE IF NOT EXISTS `cms_widgets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `position` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `widgets_texts` (
+CREATE TABLE IF NOT EXISTS `cms_widgets_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
   `language` char(2) COLLATE utf8_unicode_ci NOT NULL,
   `text` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `cms_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `password` char(32) COLLATE utf8_unicode_ci NOT NULL,
+  `role` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `auth_backend` (`id`, `username`, `password`, `role`, `name`, `email`) VALUES
+(1, 'admin', 'a3cfffd4012ef24e3f07903e4a8894e3', 'admin', 'Administrator', 'admin@example.com');

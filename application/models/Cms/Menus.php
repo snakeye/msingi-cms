@@ -3,7 +3,7 @@
 class Cms_Menus extends Msingi_Db_Table_Multilanguage
 {
 
-	protected $_name = 'menus';
+	protected $_name = 'cms_menus';
 
 	/**
 	 *

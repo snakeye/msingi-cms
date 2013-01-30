@@ -3,6 +3,10 @@
 class Cms_Widget extends Msingi_Db_Table_Row_Multilanguage
 {
 
+	/**
+	 *
+	 * @param array $data
+	 */
 	public function setFromArray(array $data)
 	{
 		parent::setFromArray($data);

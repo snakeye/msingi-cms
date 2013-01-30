@@ -91,7 +91,7 @@ class LoginController extends Msingi_Controller
 		$table = Backend_Auth::getInstance();
 
 		$authAdapter = new Zend_Auth_Adapter_DbTable($table->getAdapter());
-		$authAdapter->setTableName('auth_backend');
+		$authAdapter->setTableName('cms_users');
 
 		$authAdapter->setIdentityColumn('username');
 		$authAdapter->setIdentity($params['username']);

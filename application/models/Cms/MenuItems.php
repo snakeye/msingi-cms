@@ -3,7 +3,7 @@
 class Cms_MenuItems extends Msingi_Db_Table_Multilanguage
 {
 
-	protected $_name = 'menu';
+	protected $_name = 'cms_menu';
 	protected $_rowClass = 'Cms_MenuItem';
 	protected $_dependentTables = array('Cms_MenuItemTexts');
 

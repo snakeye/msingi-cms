@@ -23,28 +23,6 @@ class Msingi_Db_Table extends Zend_Db_Table
 
 	/**
 	 *
-	 * @param integer $id null or -1 to create new object
-	 * @param array $params create row parameters
-	 * @return Msingi_Db_Table_Row|null
-	 */
-	public static function fetchOrCreate($id, array $params = array())
-	{
-		$table = new static;
-
-		if ($id == -1 || $id == null)
-		{
-			$object = $table->createRow($params);
-		}
-		else
-		{
-			$object = $table->fetchById($id);
-		}
-
-		return $object;
-	}
-
-	/**
-	 *
 	 * @param type $id
 	 * @return type
 	 */
@@ -77,26 +55,6 @@ class Msingi_Db_Table extends Zend_Db_Table
 	 *
 	 * @param type $select
 	 */
-	public function fetchAllById($select)
-	{
-		$ret = array();
-
-		$rows = $this->fetchAll($select);
-
-		foreach ($rows as $row_id)
-		{
-			$row = $this->fetchById($row_id->id);
-			if ($row != null)
-				$ret[] = $row;
-		}
-
-		return $ret;
-	}
-
-	/**
-	 *
-	 * @param type $select
-	 */
 	public function countRows($select)
 	{
 		$select->from($this, array('cnt' => 'COUNT(*)'));
@@ -121,17 +79,6 @@ class Msingi_Db_Table extends Zend_Db_Table
 	protected function _getCacheId(array $params)
 	{
 		return $this->_name . '_object_' . implode('_', $params);
-	}
-
-	/**
-	 * Static function for row creation
-	 * @param type $data
-	 * @return type
-	 */
-	public static function createRowStatic($data = array())
-	{
-		$table = new static;
-		return $table->createRow($data);
 	}
 
 }

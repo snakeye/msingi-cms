@@ -6,7 +6,7 @@
 class Cms_DictionaryLabels extends Msingi_Db_Table
 {
 
-	protected $_name = 'dictionary_labels';
+	protected $_name = 'cms_dictionary_labels';
 	protected $_referenceMap = array(
 		'Dictionary' => array(
 			'columns' => 'row_id',

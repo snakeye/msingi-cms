@@ -5,14 +5,12 @@
  *
  * @package MsingiCms
  */
-abstract
-class Cms_DictionaryAbstract extends Cms_Dictionaries
+abstract class Cms_Dictionary_Abstract extends Cms_Dictionaries
 {
 
 	protected $_dictionary = array();
 
-	abstract
-	protected function _getType();
+	abstract protected function _getType();
 
 	/**
 	 *
@@ -125,11 +123,11 @@ class Cms_DictionaryAbstract extends Cms_Dictionaries
 
 			// construct select
 			$select = $this->select()->from($this, array('id', 'name'))
-				->joinLeft($texts_table, $this->_name . '.id = ' . $texts_table . '.row_id', array('label'))
-				->where('type = ?', $this->_getType())
-				->where('language = ?', $language)
-				->order('label ASC')
-				->setIntegrityCheck(false);
+					->joinLeft($texts_table, $this->_name . '.id = ' . $texts_table . '.row_id', array('label'))
+					->where('type = ?', $this->_getType())
+					->where('language = ?', $language)
+					->order('label ASC')
+					->setIntegrityCheck(false);
 
 			// result
 			$dictionary = array();

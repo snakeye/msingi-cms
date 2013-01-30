@@ -9,7 +9,7 @@
 class Cms_Dictionaries extends Msingi_Db_Table
 {
 
-	protected $_name = 'dictionary';
+	protected $_name = 'cms_dictionary';
 	protected $_dependentTables = array('Cms_DictionaryLabels');
 
 	/**

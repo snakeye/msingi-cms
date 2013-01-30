@@ -1,13 +1,15 @@
 <?php
 
-class Languages
+class Cms_Constants_Languages
 {
 
 	const LABEL_NAME = 'name';
 	const LABEL_NATIVE_NAME = 'native_name';
 	const LABEL_LONG = 'long';
 
+	//
 	protected static $s_values;
+	//
 	protected $_values;
 
 	/**
