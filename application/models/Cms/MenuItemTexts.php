@@ -1,6 +1,6 @@
 <?php
 
-class Cms_MenuItemTexts extends Msingi_Db_Table_Multilanguage
+class Cms_MenuItemTexts extends Msingi_Db_Table
 {
 
 	protected $_name = 'cms_menu_texts';

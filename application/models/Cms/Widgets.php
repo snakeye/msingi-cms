@@ -16,6 +16,8 @@ class Cms_Widgets extends Msingi_Db_Table_Multilanguage
 	 */
 	public function fetchWidget($position, $create = true)
 	{
+		$position = $this->formatPosition($position);
+
 		$cache = Zend_Registry::get('Zend_Cache');
 		$cache_id = $this->_getCacheId($position);
 

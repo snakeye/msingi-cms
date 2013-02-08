@@ -13,7 +13,7 @@ class Cms_Widget extends Msingi_Db_Table_Row_Multilanguage
 
 		if ($this->id != 0)
 		{
-			$languages = Settings::getInstance()->getArray('multilanguage:languages');
+		$languages = Msingi_Model_Settings::getInstance()->getArray('section:frontend:languages:enabled');
 
 			foreach ($languages as $lang)
 			{

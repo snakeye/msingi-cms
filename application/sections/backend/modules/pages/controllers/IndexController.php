@@ -72,7 +72,7 @@ class Pages_IndexController extends Msingi_Controller_Backend
 			$page->save();
 		}
 
-		$languages = Msingi_Application_Settings::getInstance()->getArray('section:frontend:languages:enabled');
+		$languages = Msingi_Model_Settings::getInstance()->getArray('section:frontend:languages:enabled');
 
 		$template = $page->template();
 
