@@ -8,8 +8,6 @@ class Msingi_Application_Section
 	protected $_aliases;
 	protected $_modules;
 	protected $_assets;
-	// locale for single-language sections
-	protected $_locale;
 
 	/**
 	 *
@@ -87,6 +85,18 @@ class Msingi_Application_Section
 	public function assets()
 	{
 		return $this->_assets;
+	}
+
+	/**
+	 *
+	 * @param type $url
+	 * @return string
+	 */
+	public function url($url)
+	{
+		$url = rtrim($this->_root, '/') . '/' . ltrim($url, '/');
+
+		return $url;
 	}
 
 }

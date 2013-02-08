@@ -270,4 +270,25 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		return $layout;
 	}
 
+	/**
+	 *
+	 */
+	protected function _initActionHelpers()
+	{
+		$this->bootstrap(array('FrontController'));
+		$front = $this->getResource('FrontController');
+
+//		if (Zend_Controller_Action_HelperBroker::hasHelper('Redirector'))
+//		{
+//			Zend_Controller_Action_HelperBroker::removeHelper('Redirector');
+//		}
+//		Zend_Controller_Action_HelperBroker::addHelper(new Msingi_Controller_Action_Helper_Redirector());
+
+		if (Zend_Controller_Action_HelperBroker::hasHelper('Url'))
+		{
+			Zend_Controller_Action_HelperBroker::removeHelper('Url');
+		}
+		Zend_Controller_Action_HelperBroker::addHelper(new Msingi_Controller_Action_Helper_Url());
+	}
+
 }

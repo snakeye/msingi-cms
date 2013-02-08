@@ -11,7 +11,7 @@ class Form_Settings extends Msingi_Form
 		$this->setAction('/settings');
 		$this->setMethod('post');
 
-		$this->addElement('hidden', 'section');
+		$this->addElement('hidden', 'group');
 	}
 
 	/**

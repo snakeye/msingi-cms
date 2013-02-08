@@ -17,14 +17,14 @@ class Msingi_Controller_Backend_Settings extends Msingi_Controller_Backend
 
 	/**
 	 *
-	 * @param type $section
+	 * @param type $group
 	 * @return \Form_Settings
 	 */
-	protected function getForm($section)
+	protected function getForm($group)
 	{
-		if (isset($section['form']) && $section['form'] != '')
+		if (isset($group['form']) && $group['form'] != '')
 		{
-			$form_class = $section['form'];
+			$form_class = $group['form'];
 			$form = new $form_class();
 		}
 		else
@@ -32,7 +32,7 @@ class Msingi_Controller_Backend_Settings extends Msingi_Controller_Backend
 			$form = new Form_Settings();
 		}
 
-		$form->createElements(isset($section['settings']) ? $section['settings'] : null);
+		$form->createElements(isset($group['settings']) ? $group['settings'] : null);
 
 		return $form;
 	}
@@ -48,40 +48,40 @@ class Msingi_Controller_Backend_Settings extends Msingi_Controller_Backend
 		{
 			$post = $rq->getPost();
 
-			$section_id = intval($post['section']);
-			if (!isset($this->_settings[$section_id]))
+			$group_id = intval($post['group']);
+			if (!isset($this->_settings[$group_id]))
 				return $this->_helper->redirector('index');
 
-			$section = $this->_settings[$section_id];
+			$group = $this->_settings[$group_id];
 
-			$form = $this->getForm($section);
+			$form = $this->getForm($group);
 
 			if ($form->isValid($post))
 			{
-				$form->updateSettings($section['settings'], $form->getValues());
+				$form->updateSettings($group['settings'], $form->getValues());
 
-				return $this->_helper->redirector('index', 'index', 'settings', array('section' => $section_id));
+				return $this->_helper->redirector('index', 'index', 'settings', array('group' => $group_id));
 			}
 		}
 		else
 		{
-			$section_id = intval($rq->get('section'));
-			if (!isset($this->_settings[$section_id]))
+			$group_id = intval($rq->get('group'));
+			if (!isset($this->_settings[$group_id]))
 				return $this->_helper->redirector('index');
-			$section = $this->_settings[$section_id];
+			$group = $this->_settings[$group_id];
 
-			$form = $this->getForm($section);
+			$form = $this->getForm($group);
 
-			$form->getElement('section')->setValue($section_id);
+			$form->getElement('group')->setValue($group_id);
 
-			$form->fill(isset($section['settings']) ? $section['settings'] : null);
+			$form->fill(isset($group['settings']) ? $group['settings'] : null);
 		}
 
 		$this->view->form = $form;
-		$this->view->section_label = $section['label'];
+		$this->view->group_label = $group['label'];
 
-		if (isset($section['view']) && $section['view'] != '')
-			return $this->render($section['view']);
+		if (isset($group['view']) && $group['view'] != '')
+			return $this->render($group['view']);
 	}
 
 }

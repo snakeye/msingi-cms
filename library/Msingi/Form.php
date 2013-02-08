@@ -15,6 +15,19 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 
 	/**
 	 *
+	 * @param type $action
+	 */
+	public function setAction($action)
+	{
+		$currentSection = Zend_Registry::get('CurrentSection');
+
+		$action = $currentSection->url($action);
+
+		return parent::setAction($action);
+	}
+
+	/**
+	 *
 	 * @param type $values
 	 */
 	public function populate($values)

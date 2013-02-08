@@ -11,7 +11,7 @@ class Form_Settings_Multilanguage extends Msingi_Form_Tabs
 		$this->setAction('/settings');
 		$this->setMethod('post');
 
-		$this->addElement('hidden', 'section');
+		$this->addElement('hidden', 'group');
 	}
 
 	/**
