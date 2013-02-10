@@ -3,7 +3,7 @@
 class Msingi_Model_Pages_SectionsTable extends Msingi_Db_Table_Multilanguage
 {
 
-	protected $_name = 'page_sections';
+	protected $_name = 'cms_page_sections';
 	protected $_rowClass = 'Msingi_Model_Pages_Section';
 	protected $_referenceMap = array(
 		'Pages' => array(

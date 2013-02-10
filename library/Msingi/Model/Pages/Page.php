@@ -136,7 +136,7 @@ class Msingi_Model_Pages_Page extends Msingi_Db_Table_Row_Multilanguage
 		$page_sections = new Msingi_Model_Pages_SectionsTable();
 
 		$select = $page_sections->select()->from($page_sections, array('name'))
-			->joinLeft('page_sections_texts', 'page_sections_texts.parent_id = page_sections.id', array('content'))
+			->joinLeft('cms_page_sections_texts', 'cms_page_sections_texts.parent_id = cms_page_sections.id', array('content'))
 			->where('page_id = ?', $this->id)
 			->where('language = ?', $language)
 			->setIntegrityCheck(false);
