@@ -52,4 +52,16 @@ class Cms_Widgets extends Msingi_Db_Table_Multilanguage
 		return $this->_name . '_' . $position;
 	}
 
+	/**
+	 *
+	 * @param type $position
+	 */
+	protected function formatPosition($position)
+	{
+		$position = preg_replace('#[^a-z0-9_]#i', '_', $position);
+		$position = preg_replace('#_+#', '_', $position);
+
+		return $position;
+	}
+
 }

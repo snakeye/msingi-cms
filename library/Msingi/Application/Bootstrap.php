@@ -202,7 +202,7 @@ class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	 */
 	protected function _initTheme()
 	{
-		$this->bootstrap('Sections', 'Settings', 'View');
+		$this->bootstrap(array('Sections', 'Settings', 'View', 'Router'));
 		$sections = $this->getResource('Sections');
 
 		// get current section

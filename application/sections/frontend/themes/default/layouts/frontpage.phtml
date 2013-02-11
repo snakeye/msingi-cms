@@ -1,1 +1,29 @@
-<?= $this->layout()->content ?>
+<?= $this->doctype() ?>
+<html lang="<?= $this->language() ?>">
+	<head>
+		<?= $this->headMeta(); ?>
+		<?= $this->headTitle(); ?>
+		<?= $this->headLink(); ?>
+		<?= $this->headLess(); ?>
+		<?= $this->headStyle(); ?>
+		<?= $this->headScript(); ?>
+	</head>
+	<body>
+		<?= $this->partial('partials/navbar.phtml') ?>
+		<div class="container widgets">
+			<div class="span4">
+				<?= $this->widget('frontpage-1') ?>
+			</div>
+			<div class="span4">
+				<?= $this->widget('frontpage-2') ?>
+			</div>
+			<div class="span4">
+				<?= $this->widget('frontpage-3') ?>
+			</div>
+		</div>
+		<div class="container" id="content">
+			<?= $this->layout()->content ?>
+		</div>
+		<?= $this->partial('partials/footer.phtml') ?>
+	</body>
+</html>

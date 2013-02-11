@@ -50,4 +50,41 @@ class Msingi_Router_SingleLanguage extends Msingi_Router
 		return parent::route($request);
 	}
 
+	/**
+	 *
+	 * @todo make relative paths from root
+	 * @param type $userParams
+	 * @param type $name
+	 * @param type $reset
+	 * @param type $encode
+	 * @return string
+	 * @throws Zend_Exception
+	 */
+	public function assemble($userParams, $name = null, $reset = false, $encode = true)
+	{
+		$root = '';
+
+		$sections = Zend_Registry::get('Sections');
+		if (isset($userParams['section']) && $userParams['section'] != '')
+		{
+			$section = $sections->getSection($userParams['section']);
+			if ($section == null)
+			{
+				throw new Zend_Exception(sprintf('Undefined section "%s"', $userParams['section']));
+			}
+		}
+		else
+		{
+			$section = $sections->getCurrentSection();
+		}
+
+		unset($userParams['section']);
+
+		$root = $section->root();
+
+		$path = rtrim($root, '/') . parent::assemble($userParams, $name, $reset, $encode);
+
+		return $path;
+	}
+
 }
