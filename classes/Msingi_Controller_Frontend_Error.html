@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \Msingi_View</title>
+<title>phpDocumentor » \Msingi_Controller_Frontend_Error</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -59,23 +59,26 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method__" title="_ :: "><span class="description">_()
+<li class="method public inherited"><a href="#method__" title="_ :: "><span class="description">_()
         </span><pre>_()</pre></a></li>
-<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method__s" title="_s :: Wrapper for sprintf function"><span class="description">Wrapper for sprintf function</span><pre>_s()</pre></a></li>
-<li class="method public "><a href="#method_getTranslator" title="getTranslator :: "><span class="description">getTranslator()
+<li class="method public inherited"><a href="#method__s" title="_s :: "><span class="description">_s()
+        </span><pre>_s()</pre></a></li>
+<li class="method public inherited"><a href="#method_ajaxResponse" title="ajaxResponse :: Update response to handle AJAX"><span class="description">Update response to handle AJAX</span><pre>ajaxResponse()</pre></a></li>
+<li class="method public "><a href="#method_errorAction" title="errorAction :: "><span class="description">errorAction()
+        </span><pre>errorAction()</pre></a></li>
+<li class="method public inherited"><a href="#method_getLog" title="getLog :: "><span class="description">getLog()
+        </span><pre>getLog()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTranslator" title="getTranslator :: "><span class="description">getTranslator()
         </span><pre>getTranslator()</pre></a></li>
-<li class="method public "><a href="#method_language" title="language :: "><span class="description">language()
+<li class="method public inherited"><a href="#method_language" title="language :: "><span class="description">language()
         </span><pre>language()</pre></a></li>
-<li class="method public "><a href="#method_locale" title="locale :: "><span class="description">locale()
+<li class="method public inherited"><a href="#method_locale" title="locale :: "><span class="description">locale()
         </span><pre>locale()</pre></a></li>
-<li class="method public "><a href="#method_setDefaultTranslator" title="setDefaultTranslator :: "><span class="description">setDefaultTranslator()
+<li class="method public inherited"><a href="#method_preDispatch" title="preDispatch :: "><span class="description">preDispatch()
+        </span><pre>preDispatch()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDefaultTranslator" title="setDefaultTranslator :: "><span class="description">setDefaultTranslator()
         </span><pre>setDefaultTranslator()</pre></a></li>
-<li class="method public "><a href="#method_setDoctype" title="setDoctype :: Set DOCTYPE"><span class="description">Set DOCTYPE</span><pre>setDoctype()</pre></a></li>
-<li class="method public "><a href="#method_setTranslator" title="setTranslator :: "><span class="description">setTranslator()
-        </span><pre>setTranslator()</pre></a></li>
-<li class="method public "><a href="#method_translate" title="translate :: "><span class="description">translate()
+<li class="method public inherited"><a href="#method_translate" title="translate :: "><span class="description">translate()
         </span><pre>translate()</pre></a></li>
 </ul>
 </li>
@@ -85,25 +88,26 @@
 </li>
 <li class="nav-header protected">» Protected
                     <ul>
-<li class="property protected "><a href="#property__locale" title="$_locale :: "><span class="description"></span><pre>$_locale</pre></a></li>
-<li class="property protected "><a href="#property__translator" title="$_translator :: "><span class="description"></span><pre>$_translator</pre></a></li>
-<li class="property protected "><a href="#property__translatorDefault" title="$_translatorDefault :: "><span class="description"></span><pre>$_translatorDefault</pre></a></li>
+<li class="property protected "><a href="#property__layout" title="$_layout :: "><span class="description"></span><pre>$_layout</pre></a></li>
+<li class="property protected inherited"><a href="#property__locale" title="$_locale :: "><span class="description"></span><pre>$_locale</pre></a></li>
+<li class="property protected inherited"><a href="#property__translator" title="$_translator :: "><span class="description"></span><pre>$_translator</pre></a></li>
+<li class="property protected inherited"><a href="#property__translatorDefault" title="$_translatorDefault :: "><span class="description"></span><pre>$_translatorDefault</pre></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a id="\Msingi_View"></a><ul class="breadcrumb">
+<a id="\Msingi_Controller_Frontend_Error"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/global.html">global</a></li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Msingi_View.html">Msingi_View</a>
+<span class="divider">\</span><a href="../classes/Msingi_Controller_Frontend_Error.html">Msingi_Controller_Frontend_Error</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description"></p>
+<p class="short_description">Error controller</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered">
@@ -122,9 +126,19 @@
 <h2>_()
         </h2>
 <pre>_(string $string) </pre>
-<div class="labels"></div>
+<div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::_()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::_()</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$string</h4>
@@ -132,49 +146,122 @@
 </div>
 </div></div>
 </div>
-<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-<h2>__construct()
-        </h2>
-<pre>__construct(\type $config) </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$config</h4>
-<code>\type</code>
-</div>
-</div></div>
-</div>
 <a id="method__s"></a><div class="element clickable method public method__s" data-toggle="collapse" data-target=".method__s .collapse">
-<h2>Wrapper for sprintf function</h2>
-<pre>_s(\type $string) : \type</pre>
-<div class="labels"></div>
+<h2>_s()
+        </h2>
+<pre>_s(string $string) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::_s()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::_s()</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$string</h4>
-<code>\type</code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_ajaxResponse"></a><div class="element clickable method public method_ajaxResponse" data-toggle="collapse" data-target=".method_ajaxResponse .collapse">
+<h2>Update response to handle AJAX</h2>
+<pre>ajaxResponse() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::ajaxResponse()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::ajaxResponse()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_errorAction"></a><div class="element clickable method public method_errorAction" data-toggle="collapse" data-target=".method_errorAction .collapse">
+<h2>errorAction()
+        </h2>
+<pre>errorAction() : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
 <div class="subelement response"><code>\type</code></div>
+</div></div>
+</div>
+<a id="method_getLog"></a><div class="element clickable method public method_getLog" data-toggle="collapse" data-target=".method_getLog .collapse">
+<h2>getLog()
+        </h2>
+<pre>getLog() : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::getLog()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::getLog()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_getTranslator"></a><div class="element clickable method public method_getTranslator" data-toggle="collapse" data-target=".method_getTranslator .collapse">
 <h2>getTranslator()
         </h2>
-<pre>getTranslator() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<pre>getTranslator() : \Zend_Translate | \Msingi_Translator_Dummy</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::getTranslator()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::getTranslator()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Zend_Translate</code><code>\Msingi_Translator_Dummy</code>
+</div>
+</div></div>
 </div>
 <a id="method_language"></a><div class="element clickable method public method_language" data-toggle="collapse" data-target=".method_language .collapse">
 <h2>language()
         </h2>
 <pre>language() : string</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::language()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::language()</td>
+</tr>
+</table>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
@@ -182,21 +269,56 @@
 <a id="method_locale"></a><div class="element clickable method public method_locale" data-toggle="collapse" data-target=".method_locale .collapse">
 <h2>locale()
         </h2>
-<pre>locale() : \type</pre>
-<div class="labels"></div>
+<pre>locale() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::locale()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::locale()</td>
+</tr>
+</table>
 <h3>Returns</h3>
-<div class="subelement response"><code>\type</code></div>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_preDispatch"></a><div class="element clickable method public method_preDispatch" data-toggle="collapse" data-target=".method_preDispatch .collapse">
+<h2>preDispatch()
+        </h2>
+<pre>preDispatch() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::preDispatch()</td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_setDefaultTranslator"></a><div class="element clickable method public method_setDefaultTranslator" data-toggle="collapse" data-target=".method_setDefaultTranslator .collapse">
 <h2>setDefaultTranslator()
         </h2>
 <pre>setDefaultTranslator(\type $translator) </pre>
-<div class="labels"><span class="label">Static</span></div>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::setDefaultTranslator()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::setDefaultTranslator()</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$translator</h4>
@@ -209,49 +331,23 @@
 </tr></table>
 </div></div>
 </div>
-<a id="method_setDoctype"></a><div class="element clickable method public method_setDoctype" data-toggle="collapse" data-target=".method_setDoctype .collapse">
-<h2>Set DOCTYPE</h2>
-<pre>setDoctype(string $doctype, string $charset) </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$doctype</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$charset</h4>
-<code>string</code><p>charset UTF-8 by default</p>
-</div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code>\Zend_Exception</code></th>
-<td></td>
-</tr></table>
-</div></div>
-</div>
-<a id="method_setTranslator"></a><div class="element clickable method public method_setTranslator" data-toggle="collapse" data-target=".method_setTranslator .collapse">
-<h2>setTranslator()
-        </h2>
-<pre>setTranslator(\type $translator) </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$translator</h4>
-<code>\type</code>
-</div>
-</div></div>
-</div>
 <a id="method_translate"></a><div class="element clickable method public method_translate" data-toggle="collapse" data-target=".method_translate .collapse">
 <h2>translate()
         </h2>
 <pre>translate(\type $string) : \type</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::translate()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::translate()</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$string</h4>
@@ -263,23 +359,65 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__layout"> </a><div class="element clickable property protected property__layout" data-toggle="collapse" data-target=".property__layout .collapse">
+<h2></h2>
+<pre>$_layout </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property__locale"> </a><div class="element clickable property protected property__locale" data-toggle="collapse" data-target=".property__locale .collapse">
 <h2></h2>
 <pre>$_locale </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::$$_locale</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::$$_locale</td>
+</tr>
+</table>
+</div></div>
 </div>
 <a id="property__translator"> </a><div class="element clickable property protected property__translator" data-toggle="collapse" data-target=".property__translator .collapse">
 <h2></h2>
 <pre>$_translator </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::$$_translator</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::$$_translator</td>
+</tr>
+</table>
+</div></div>
 </div>
 <a id="property__translatorDefault"> </a><div class="element clickable property protected property__translatorDefault" data-toggle="collapse" data-target=".property__translatorDefault .collapse">
 <h2></h2>
 <pre>$_translatorDefault </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller::$$_translatorDefault</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Msingi_Controller_Frontend::$$_translatorDefault</td>
+</tr>
+</table>
+</div></div>
 </div>
 </div>
 </div>
