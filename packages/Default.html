@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » Default</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Minify.html"><i class="icon-folder-open"></i> Minify</a></li>
+<li><a href="../packages/Msingi.html"><i class="icon-folder-open"></i> Msingi</a></li>
+<li><a href="../packages/MsingiCms.html"><i class="icon-folder-open"></i> MsingiCms</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">483</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">7</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Default.html" title="Default"><i class="icon-folder-open"></i>Default</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_reg_escape" title="reg_escape :: "><span class="description">reg_escape()
+        </span><pre>reg_escape</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#Msingi_View_Helper_HeadLess" title="">Msingi_View_Helper_HeadLess</a></li>
+<li><a href="#Msingi_View_Helper_Content" title="">Msingi_View_Helper_Content</a></li>
+<li><a href="#Msingi_View_Helper_ActiveMenuBranch" title="">Msingi_View_Helper_ActiveMenuBranch</a></li>
+<li><a href="#Msingi_View_Helper_Settings" title="">Msingi_View_Helper_Settings</a></li>
+<li><a href="#Msingi_View_Helper_Root" title="">Msingi_View_Helper_Root</a></li>
+<li><a href="#Msingi_View_Helper_Section" title="">Msingi_View_Helper_Section</a></li>
+<li><a href="#Msingi_View_Helper_ModuleMenu" title="">Msingi_View_Helper_ModuleMenu</a></li>
+<li><a href="#Msingi_View_Helper_U" title="">Msingi_View_Helper_U</a></li>
+<li><a href="#Msingi_View_Helper_Widget" title="">Msingi_View_Helper_Widget</a></li>
+<li><a href="#Msingi_View_Helper_Partial" title="">Msingi_View_Helper_Partial</a></li>
+<li><a href="#Msingi_View_Helper_Assets" title="">Msingi_View_Helper_Assets</a></li>
+<li><a href="#Msingi_View_Helper_Jquery" title="">Msingi_View_Helper_Jquery</a></li>
+<li><a href="#Msingi_Translate_Adapter" title="">Msingi_Translate_Adapter</a></li>
+<li><a href="#Msingi_Attachements" title="">Msingi_Attachements</a></li>
+<li><a href="#Msingi_Form" title="">Msingi_Form</a></li>
+<li><a href="#Msingi_Paginator" title="">Msingi_Paginator</a></li>
+<li><a href="#Msingi_Db_Table_Multilanguage" title="">Msingi_Db_Table_Multilanguage</a></li>
+<li><a href="#Msingi_Db_Table_ObjectDictionary" title="">Msingi_Db_Table_ObjectDictionary</a></li>
+<li><a href="#Msingi_Db_Table_Cache" title="">Msingi_Db_Table_Cache</a></li>
+<li><a href="#Msingi_Db_Table_Row" title="">Msingi_Db_Table_Row</a></li>
+<li><a href="#Msingi_Db_Table_MultilanguageTexts" title="">Msingi_Db_Table_MultilanguageTexts</a></li>
+<li><a href="#Msingi_Db_Table_Row_Multilanguage" title="">Msingi_Db_Table_Row_Multilanguage</a></li>
+<li><a href="#Msingi_Db_Table_Row_MultilanguageTexts" title="">Msingi_Db_Table_Row_MultilanguageTexts</a></li>
+<li><a href="#Msingi_Db_Table" title="">Msingi_Db_Table</a></li>
+<li><a href="#Msingi_Form_Tabs" title="">Msingi_Form_Tabs</a></li>
+<li><a href="#Msingi_Form_Filter_PageTags" title="">Msingi_Form_Filter_PageTags</a></li>
+<li><a href="#Msingi_Controller_Error" title="">Msingi_Controller_Error</a></li>
+<li><a href="#Msingi_Controller_Backend_ListingAbstract" title="">Msingi_Controller_Backend_ListingAbstract</a></li>
+<li><a href="#Msingi_Controller_Backend_Dictionaries" title="">Msingi_Controller_Backend_Dictionaries</a></li>
+<li><a href="#Msingi_Controller_Backend_Settings" title="">Msingi_Controller_Backend_Settings</a></li>
+<li><a href="#Msingi_Controller_Frontend" title="">Msingi_Controller_Frontend</a></li>
+<li><a href="#Msingi_Controller_Request" title="">Msingi_Controller_Request</a></li>
+<li><a href="#Msingi_Controller_Plugin_Minify" title="">Msingi_Controller_Plugin_Minify</a></li>
+<li><a href="#Msingi_Controller_Plugin_HttpConditional" title="">Msingi_Controller_Plugin_HttpConditional</a></li>
+<li><a href="#Msingi_Controller_Plugin_ContentType" title="">Msingi_Controller_Plugin_ContentType</a></li>
+<li><a href="#Msingi_Controller_Plugin_ViewScripts" title="">Msingi_Controller_Plugin_ViewScripts</a></li>
+<li><a href="#Msingi_Controller_Plugin_CacheControl" title="">Msingi_Controller_Plugin_CacheControl</a></li>
+<li><a href="#Msingi_Controller_Response" title="">Msingi_Controller_Response</a></li>
+<li><a href="#Msingi_Controller_Frontend_ErrorController" title="">Msingi_Controller_Frontend_ErrorController</a></li>
+<li><a href="#Msingi_Controller_Backend" title="">Msingi_Controller_Backend</a></li>
+<li><a href="#Msingi_Controller_Action_Helper_Url" title="">Msingi_Controller_Action_Helper_Url</a></li>
+<li><a href="#Msingi_Controller_Action_Helper_Redirector" title="">Msingi_Controller_Action_Helper_Redirector</a></li>
+<li><a href="#Msingi_Application_Sections" title="">Msingi_Application_Sections</a></li>
+<li><a href="#Msingi_Application_Resource_Debug" title="">Msingi_Application_Resource_Debug</a></li>
+<li><a href="#Msingi_Application_Resource_Log" title="">Msingi_Application_Resource_Log</a></li>
+<li><a href="#Msingi_Application_Resource_Sections" title="">Msingi_Application_Resource_Sections</a></li>
+<li><a href="#Msingi_Application_Resource_Content" title="">Msingi_Application_Resource_Content</a></li>
+<li><a href="#Msingi_Application_Resource_Dir" title="">Msingi_Application_Resource_Dir</a></li>
+<li><a href="#Msingi_Application_Resource_Cache" title="">Msingi_Application_Resource_Cache</a></li>
+<li><a href="#Msingi_Application_Section" title="">Msingi_Application_Section</a></li>
+<li><a href="#Msingi_Application_Section_Bootstrap" title="">Msingi_Application_Section_Bootstrap</a></li>
+<li><a href="#Msingi_Router_MultiLanguage" title="">Msingi_Router_MultiLanguage</a></li>
+<li><a href="#Msingi_Router_SingleLanguage" title="">Msingi_Router_SingleLanguage</a></li>
+<li><a href="#Msingi_Theme" title="">Msingi_Theme</a></li>
+<li><a href="#Msingi_Util_Image" title="">Msingi_Util_Image</a></li>
+<li><a href="#Msingi_Util_HTML2Text" title="">Msingi_Util_HTML2Text</a></li>
+<li><a href="#Msingi_Util_Password" title="">Msingi_Util_Password</a></li>
+<li><a href="#Msingi_Util_StripAttributes" title="Strip attribute Class
+Remove attributes from XML elements">Msingi_Util_StripAttributes</a></li>
+<li><a href="#Msingi_Util_Mime" title="">Msingi_Util_Mime</a></li>
+<li><a href="#Msingi_Util_Http" title="">Msingi_Util_Http</a></li>
+<li><a href="#Msingi_Model_Pages_SectionsTable" title="">Msingi_Model_Pages_SectionsTable</a></li>
+<li><a href="#Msingi_Model_Pages_PagesTable" title="">Msingi_Model_Pages_PagesTable</a></li>
+<li><a href="#Msingi_Model_Pages_Section" title="">Msingi_Model_Pages_Section</a></li>
+<li><a href="#Msingi_Model_Translations" title="">Msingi_Model_Translations</a></li>
+<li><a href="#Msingi_Model_Constants_Timezones" title="">Msingi_Model_Constants_Timezones</a></li>
+<li><a href="#Msingi_Model_Constants_Languages" title="">Msingi_Model_Constants_Languages</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_DEBUG" title="DEBUG :: "><span class="description">DEBUG</span><pre>DEBUG</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/Default.html">Default</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_reg_escape"></a><div class="element clickable function  function_reg_escape" data-toggle="collapse" data-target=".function_reg_escape .collapse">
+<h2>reg_escape()
+        </h2>
+<pre>reg_escape($str) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$str</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Msingi_Application_Resource_Cache" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Cache<a href="../classes/Msingi_Application_Resource_Cache.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Cache.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Resource_Content" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Content<a href="../classes/Msingi_Application_Resource_Content.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Content.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Resource_Debug" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Debug<a href="../classes/Msingi_Application_Resource_Debug.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Debug.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Resource_Dir" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Dir<a href="../classes/Msingi_Application_Resource_Dir.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Dir.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Resource_Log" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Log<a href="../classes/Msingi_Application_Resource_Log.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Log.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Resource_Sections" class="element ajax clickable class">
+<h1>Msingi_Application_Resource_Sections<a href="../classes/Msingi_Application_Resource_Sections.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Resource_Sections.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Section" class="element ajax clickable class">
+<h1>Msingi_Application_Section<a href="../classes/Msingi_Application_Section.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Section.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Section_Bootstrap" class="element ajax clickable class">
+<h1>Msingi_Application_Section_Bootstrap<a href="../classes/Msingi_Application_Section_Bootstrap.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Section_Bootstrap.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Application_Sections" class="element ajax clickable class">
+<h1>Msingi_Application_Sections<a href="../classes/Msingi_Application_Sections.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Application_Sections.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Attachements" class="element ajax clickable class">
+<h1>Msingi_Attachements<a href="../classes/Msingi_Attachements.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Attachements.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Action_Helper_Redirector" class="element ajax clickable class">
+<h1>Msingi_Controller_Action_Helper_Redirector<a href="../classes/Msingi_Controller_Action_Helper_Redirector.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Action_Helper_Redirector.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Action_Helper_Url" class="element ajax clickable class">
+<h1>Msingi_Controller_Action_Helper_Url<a href="../classes/Msingi_Controller_Action_Helper_Url.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Action_Helper_Url.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Backend" class="element ajax clickable class">
+<h1>Msingi_Controller_Backend<a href="../classes/Msingi_Controller_Backend.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Backend.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Backend_Dictionaries" class="element ajax clickable class">
+<h1>Msingi_Controller_Backend_Dictionaries<a href="../classes/Msingi_Controller_Backend_Dictionaries.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Backend_Dictionaries.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Backend_ListingAbstract" class="element ajax clickable class">
+<h1>Msingi_Controller_Backend_ListingAbstract<a href="../classes/Msingi_Controller_Backend_ListingAbstract.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Backend_ListingAbstract.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Backend_Settings" class="element ajax clickable class">
+<h1>Msingi_Controller_Backend_Settings<a href="../classes/Msingi_Controller_Backend_Settings.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Backend_Settings.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Error" class="element ajax clickable class">
+<h1>Msingi_Controller_Error<a href="../classes/Msingi_Controller_Error.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Error.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Frontend" class="element ajax clickable class">
+<h1>Msingi_Controller_Frontend<a href="../classes/Msingi_Controller_Frontend.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Frontend.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Frontend_ErrorController" class="element ajax clickable class">
+<h1>Msingi_Controller_Frontend_ErrorController<a href="../classes/Msingi_Controller_Frontend_ErrorController.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Frontend_ErrorController.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Plugin_CacheControl" class="element ajax clickable class">
+<h1>Msingi_Controller_Plugin_CacheControl<a href="../classes/Msingi_Controller_Plugin_CacheControl.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Plugin_CacheControl.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Plugin_ContentType" class="element ajax clickable class">
+<h1>Msingi_Controller_Plugin_ContentType<a href="../classes/Msingi_Controller_Plugin_ContentType.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Plugin_ContentType.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Plugin_HttpConditional" class="element ajax clickable class">
+<h1>Msingi_Controller_Plugin_HttpConditional<a href="../classes/Msingi_Controller_Plugin_HttpConditional.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Plugin_HttpConditional.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Plugin_Minify" class="element ajax clickable class">
+<h1>Msingi_Controller_Plugin_Minify<a href="../classes/Msingi_Controller_Plugin_Minify.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Plugin_Minify.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Plugin_ViewScripts" class="element ajax clickable class">
+<h1>Msingi_Controller_Plugin_ViewScripts<a href="../classes/Msingi_Controller_Plugin_ViewScripts.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Plugin_ViewScripts.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Request" class="element ajax clickable class">
+<h1>Msingi_Controller_Request<a href="../classes/Msingi_Controller_Request.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Request.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Controller_Response" class="element ajax clickable class">
+<h1>Msingi_Controller_Response<a href="../classes/Msingi_Controller_Response.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Controller_Response.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table" class="element ajax clickable class">
+<h1>Msingi_Db_Table<a href="../classes/Msingi_Db_Table.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_Cache" class="element ajax clickable class">
+<h1>Msingi_Db_Table_Cache<a href="../classes/Msingi_Db_Table_Cache.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_Cache.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_Multilanguage" class="element ajax clickable class">
+<h1>Msingi_Db_Table_Multilanguage<a href="../classes/Msingi_Db_Table_Multilanguage.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_Multilanguage.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_MultilanguageTexts" class="element ajax clickable class">
+<h1>Msingi_Db_Table_MultilanguageTexts<a href="../classes/Msingi_Db_Table_MultilanguageTexts.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_MultilanguageTexts.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_ObjectDictionary" class="element ajax clickable class">
+<h1>Msingi_Db_Table_ObjectDictionary<a href="../classes/Msingi_Db_Table_ObjectDictionary.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_ObjectDictionary.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_Row" class="element ajax clickable class">
+<h1>Msingi_Db_Table_Row<a href="../classes/Msingi_Db_Table_Row.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_Row.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_Row_Multilanguage" class="element ajax clickable class">
+<h1>Msingi_Db_Table_Row_Multilanguage<a href="../classes/Msingi_Db_Table_Row_Multilanguage.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_Row_Multilanguage.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Db_Table_Row_MultilanguageTexts" class="element ajax clickable class">
+<h1>Msingi_Db_Table_Row_MultilanguageTexts<a href="../classes/Msingi_Db_Table_Row_MultilanguageTexts.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Db_Table_Row_MultilanguageTexts.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Form" class="element ajax clickable class">
+<h1>Msingi_Form<a href="../classes/Msingi_Form.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Form.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Form_Filter_PageTags" class="element ajax clickable class">
+<h1>Msingi_Form_Filter_PageTags<a href="../classes/Msingi_Form_Filter_PageTags.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Form_Filter_PageTags.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Form_Tabs" class="element ajax clickable class">
+<h1>Msingi_Form_Tabs<a href="../classes/Msingi_Form_Tabs.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Form_Tabs.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Constants_Languages" class="element ajax clickable class">
+<h1>Msingi_Model_Constants_Languages<a href="../classes/Msingi_Model_Constants_Languages.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Constants_Languages.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Constants_Timezones" class="element ajax clickable class">
+<h1>Msingi_Model_Constants_Timezones<a href="../classes/Msingi_Model_Constants_Timezones.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Constants_Timezones.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Pages_PagesTable" class="element ajax clickable class">
+<h1>Msingi_Model_Pages_PagesTable<a href="../classes/Msingi_Model_Pages_PagesTable.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Pages_PagesTable.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Pages_Section" class="element ajax clickable class">
+<h1>Msingi_Model_Pages_Section<a href="../classes/Msingi_Model_Pages_Section.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Pages_Section.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Pages_SectionsTable" class="element ajax clickable class">
+<h1>Msingi_Model_Pages_SectionsTable<a href="../classes/Msingi_Model_Pages_SectionsTable.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Pages_SectionsTable.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Model_Translations" class="element ajax clickable class">
+<h1>Msingi_Model_Translations<a href="../classes/Msingi_Model_Translations.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Model_Translations.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Paginator" class="element ajax clickable class">
+<h1>Msingi_Paginator<a href="../classes/Msingi_Paginator.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Paginator.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Router_MultiLanguage" class="element ajax clickable class">
+<h1>Msingi_Router_MultiLanguage<a href="../classes/Msingi_Router_MultiLanguage.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Router_MultiLanguage.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Router_SingleLanguage" class="element ajax clickable class">
+<h1>Msingi_Router_SingleLanguage<a href="../classes/Msingi_Router_SingleLanguage.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Router_SingleLanguage.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Theme" class="element ajax clickable class">
+<h1>Msingi_Theme<a href="../classes/Msingi_Theme.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Theme.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Translate_Adapter" class="element ajax clickable class">
+<h1>Msingi_Translate_Adapter<a href="../classes/Msingi_Translate_Adapter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Translate_Adapter.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_HTML2Text" class="element ajax clickable class">
+<h1>Msingi_Util_HTML2Text<a href="../classes/Msingi_Util_HTML2Text.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_HTML2Text.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_Http" class="element ajax clickable class">
+<h1>Msingi_Util_Http<a href="../classes/Msingi_Util_Http.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_Http.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_Image" class="element ajax clickable class">
+<h1>Msingi_Util_Image<a href="../classes/Msingi_Util_Image.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_Image.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_Mime" class="element ajax clickable class">
+<h1>Msingi_Util_Mime<a href="../classes/Msingi_Util_Mime.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_Mime.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_Password" class="element ajax clickable class">
+<h1>Msingi_Util_Password<a href="../classes/Msingi_Util_Password.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_Password.html" class="more">« More »</a>
+</div>
+<div id="Msingi_Util_StripAttributes" class="element ajax clickable class">
+<h1>Msingi_Util_StripAttributes<a href="../classes/Msingi_Util_StripAttributes.html">¶</a>
+</h1>
+<p class="short_description">Strip attribute Class
+Remove attributes from XML elements</p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_Util_StripAttributes.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_ActiveMenuBranch" class="element ajax clickable class">
+<h1>Msingi_View_Helper_ActiveMenuBranch<a href="../classes/Msingi_View_Helper_ActiveMenuBranch.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_ActiveMenuBranch.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Assets" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Assets<a href="../classes/Msingi_View_Helper_Assets.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Assets.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Content" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Content<a href="../classes/Msingi_View_Helper_Content.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Content.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_HeadLess" class="element ajax clickable class">
+<h1>Msingi_View_Helper_HeadLess<a href="../classes/Msingi_View_Helper_HeadLess.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_HeadLess.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Jquery" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Jquery<a href="../classes/Msingi_View_Helper_Jquery.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Jquery.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_ModuleMenu" class="element ajax clickable class">
+<h1>Msingi_View_Helper_ModuleMenu<a href="../classes/Msingi_View_Helper_ModuleMenu.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_ModuleMenu.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Partial" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Partial<a href="../classes/Msingi_View_Helper_Partial.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Partial.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Root" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Root<a href="../classes/Msingi_View_Helper_Root.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Root.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Section" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Section<a href="../classes/Msingi_View_Helper_Section.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Section.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Settings" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Settings<a href="../classes/Msingi_View_Helper_Settings.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Settings.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_U" class="element ajax clickable class">
+<h1>Msingi_View_Helper_U<a href="../classes/Msingi_View_Helper_U.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_U.html" class="more">« More »</a>
+</div>
+<div id="Msingi_View_Helper_Widget" class="element ajax clickable class">
+<h1>Msingi_View_Helper_Widget<a href="../classes/Msingi_View_Helper_Widget.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Msingi_View_Helper_Widget.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_DEBUG"> </a><div class="element clickable constant  constant_DEBUG" data-toggle="collapse" data-target=".constant_DEBUG .collapse">
+<h2>DEBUG</h2>
+<pre>DEBUG </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-02-12T12:56:15+04:00.<br></footer></div>
+</div>
+</body>
+</html>
