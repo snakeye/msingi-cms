@@ -1,6 +1,11 @@
 <?php
 
-class Msingi_Controller_Error extends Msingi_Controller
+/**
+ * Error controller
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
+class Msingi_Controller_Frontend_Error extends Msingi_Controller_Frontend
 {
 
 	protected $_layout = null;
@@ -51,8 +56,6 @@ class Msingi_Controller_Error extends Msingi_Controller
 
 				break;
 		}
-
-		$this->view->title = $this->view->message;
 
 		// conditionally display exceptions
 		if (APPLICATION_ENV == 'development')

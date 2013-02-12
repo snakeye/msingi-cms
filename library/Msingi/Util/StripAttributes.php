@@ -1,16 +1,11 @@
 <?php
 
-function reg_escape($str)
-{
-	$conversions = array("^" => "\^", "[" => "\[", "." => "\.", "$" => "\$", "{" => "\{", "*" => "\*", "(" => "\(", "\\" => "\\\\", "/" => "\/", "+" => "\+", ")" => "\)", "|" => "\|", "?" => "\?", "<" => "\<", ">" => "\>");
-	return strtr($str, $conversions);
-}
-
 /**
  * Strip attribute Class
  * Remove attributes from XML elements
  * @author David (semlabs.co.uk)
  * @version 0.2
+ * @package Msingi
  */
 class Msingi_Util_StripAttributes
 {
@@ -92,6 +87,22 @@ class Msingi_Util_StripAttributes
 		return $nodes;
 	}
 
+	/**
+	 *
+	 * @param string $str
+	 * @return string
+	 */
+	private function reg_escape($str)
+	{
+		$conversions = array("^" => "\^", "[" => "\[", "." => "\.", "$" => "\$", "{" => "\{", "*" => "\*", "(" => "\(", "\\" => "\\\\", "/" => "\/", "+" => "\+", ")" => "\)", "|" => "\|", "?" => "\?", "<" => "\<", ">" => "\>");
+
+		return strtr($str, $conversions);
+	}
+
+	/**
+	 *
+	 * @param type $nodes
+	 */
 	private function removeAttributes($nodes)
 	{
 
@@ -111,7 +122,7 @@ class Msingi_Util_StripAttributes
 				}
 			}
 			$replacement = ( $new_attributes ) ? "<$node_name $new_attributes>" : "<$node_name>";
-			$this->str = preg_replace('/' . reg_escape($node['literal']) . '/', $replacement, $this->str);
+			$this->str = preg_replace('/' . $this->reg_escape($node['literal']) . '/', $replacement, $this->str);
 		}
 	}
 

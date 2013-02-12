@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_View_Helper_U extends Zend_View_Helper_Abstract
 {
 

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Model_Constants_Languages
 {
 
@@ -160,8 +164,7 @@ class Msingi_Model_Constants_Languages
 	 * @param type $with_empty
 	 * @return type
 	 */
-	public function getPairs($with_empty = false,
-		$label_field = Msingi_Model_Constants_Languages::LABEL_NAME)
+	public function getPairs($with_empty = false, $label_field = Msingi_Model_Constants_Languages::LABEL_NAME)
 	{
 		$pairs = array();
 

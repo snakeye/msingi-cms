@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Base class for backend controllers
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Controller_Backend extends Msingi_Controller
 {
 

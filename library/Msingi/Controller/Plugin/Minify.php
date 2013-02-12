@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Plugin to minify HTML code
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Controller_Plugin_Minify extends Zend_Controller_Plugin_Abstract
 {
 

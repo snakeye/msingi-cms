@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Collect jQuery snippets in single block
+ * 
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_View_Helper_Jquery extends Zend_View_Helper_Placeholder_Container_Standalone
 {
 

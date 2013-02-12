@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * View helper to display widgets
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_View_Helper_Widget extends Zend_View_Helper_Abstract
 {
 
@@ -12,7 +18,7 @@ class Msingi_View_Helper_Widget extends Zend_View_Helper_Abstract
 	{
 		$ret = '';
 
-		$widgets = new Cms_Widgets();
+		$widgets = Cms_Widgets::getInstance();
 
 		$widget = $widgets->fetchWidget($position);
 		if ($widgets != null)

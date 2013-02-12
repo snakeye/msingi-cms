@@ -1,9 +1,8 @@
 <?php
 
 /**
- * List of countries
- *
  * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Model_Constants_Countries extends Msingi_Model_ConstantsAbstract
 {

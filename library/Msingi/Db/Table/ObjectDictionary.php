@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 {
 
@@ -12,13 +16,13 @@ class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 	public function fetchPairs($object_id, $language)
 	{
 		$select = $this->select()->from($this, array())
-			->joinLeft('dictionary', $this->_name . '.dictionary_id = dictionary.id', array('name'))
-			->joinLeft('dictionary_labels', $this->_name . '.dictionary_id = dictionary_labels.row_id', array('label'))
-			->where('object_id = ?', $object_id)
-			->where('language = ?', $language)
-			->group('dictionary.id')
-			->order('label')
-			->setIntegrityCheck(false);
+				->joinLeft('dictionary', $this->_name . '.dictionary_id = dictionary.id', array('name'))
+				->joinLeft('dictionary_labels', $this->_name . '.dictionary_id = dictionary_labels.row_id', array('label'))
+				->where('object_id = ?', $object_id)
+				->where('language = ?', $language)
+				->group('dictionary.id')
+				->order('label')
+				->setIntegrityCheck(false);
 
 		return $this->getAdapter()->fetchPairs($select);
 	}
@@ -34,10 +38,10 @@ class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 
 		// get current list
 		$select = $this->select()->from($this, array())
-			->joinLeft('dictionary', $this->_name . '.dictionary_id = dictionary.id', array('name'))
-			->where('object_id = ?', $object_id)
-			->group('name')
-			->setIntegrityCheck(false);
+				->joinLeft('dictionary', $this->_name . '.dictionary_id = dictionary.id', array('name'))
+				->where('object_id = ?', $object_id)
+				->group('name')
+				->setIntegrityCheck(false);
 
 		$current = $this->fetchAll($select);
 
@@ -52,8 +56,8 @@ class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 				{
 					// delete
 					$where = $this->getAdapter()->quoteInto('object_id = ?', $object_id)
-						. ' AND '
-						. $this->getAdapter()->quoteInto('dictionary_id = ?', $dictionary_id);
+							. ' AND '
+							. $this->getAdapter()->quoteInto('dictionary_id = ?', $dictionary_id);
 
 					$this->delete($where);
 				}
@@ -68,7 +72,7 @@ class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 			if ($dictionary_id != 0)
 			{
 				$select = $this->select()->where('object_id = ?', $object_id)
-					->where('dictionary_id = ?', $dictionary_id);
+						->where('dictionary_id = ?', $dictionary_id);
 
 				$item = $this->fetchRow($select);
 
@@ -77,7 +81,7 @@ class Msingi_Db_Table_ObjectDictionary extends Msingi_Db_Table
 					$item = $this->createRow(array(
 						'object_id' => $object_id,
 						'dictionary_id' => $dictionary_id,
-						));
+							));
 
 					$item->save();
 				}

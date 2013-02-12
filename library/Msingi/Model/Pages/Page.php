@@ -2,6 +2,7 @@
 
 /**
  * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Model_Pages_Page extends Msingi_Db_Table_Row_Multilanguage
 {
@@ -105,7 +106,7 @@ class Msingi_Model_Pages_Page extends Msingi_Db_Table_Row_Multilanguage
 			$page_section = $page_sections->createRow(array(
 				'page_id' => $this->id,
 				'name' => $name,
-				));
+					));
 
 			$page_section->save();
 		}
@@ -136,10 +137,10 @@ class Msingi_Model_Pages_Page extends Msingi_Db_Table_Row_Multilanguage
 		$page_sections = new Msingi_Model_Pages_SectionsTable();
 
 		$select = $page_sections->select()->from($page_sections, array('name'))
-			->joinLeft('cms_page_sections_texts', 'cms_page_sections_texts.parent_id = cms_page_sections.id', array('content'))
-			->where('page_id = ?', $this->id)
-			->where('language = ?', $language)
-			->setIntegrityCheck(false);
+				->joinLeft('cms_page_sections_texts', 'cms_page_sections_texts.parent_id = cms_page_sections.id', array('content'))
+				->where('page_id = ?', $this->id)
+				->where('language = ?', $language)
+				->setIntegrityCheck(false);
 
 		return $page_sections->getAdapter()->fetchPairs($select);
 	}

@@ -1,10 +1,10 @@
 <?php
 
 /**
- *
  * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
-class Msingi_View extends Zend_View implements Msingi_Translator
+class Msingi_View extends Zend_View implements Msingi_Translator_Interface
 {
 
 	protected $_locale;

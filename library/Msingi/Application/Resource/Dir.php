@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Application_Resource_Dir extends Zend_Application_Resource_ResourceAbstract
 {
 

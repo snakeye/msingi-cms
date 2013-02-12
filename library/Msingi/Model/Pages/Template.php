@@ -1,14 +1,15 @@
 <?php
 
 /**
- * @package MsingiCms
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Model_Pages_Template extends Msingi_Db_Table_Row
 {
 
 	/**
 	 *
-	 * @return type
+	 * @return array of sections
 	 */
 	public function sections()
 	{

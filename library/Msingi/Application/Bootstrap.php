@@ -1,9 +1,8 @@
 <?php
 
 /**
- *
  * @package Msingi
- * @author Spectraweb s.r.o.
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {

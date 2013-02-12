@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Application_Resource_Sections extends Zend_Application_Resource_ResourceAbstract
 {
 
@@ -39,7 +43,7 @@ class Msingi_Application_Resource_Sections extends Zend_Application_Resource_Res
 			// bootstrap current section
 			$this->bootstrapSection($sections->getCurrentSection());
 
-			// 
+			//
 			Zend_Registry::set('CurrentSection', $sections->getCurrentSection());
 		}
 
@@ -67,7 +71,7 @@ class Msingi_Application_Resource_Sections extends Zend_Application_Resource_Res
 				if (!class_exists($bootstrapClass, false))
 				{
 					throw new Zend_Application_Resource_Exception(sprintf(
-							$eMsgTpl, $module, $bootstrapClass
+									$eMsgTpl, $module, $bootstrapClass
 					));
 				}
 
@@ -83,10 +87,10 @@ class Msingi_Application_Resource_Sections extends Zend_Application_Resource_Res
 
 		// add sections's library to include path
 		set_include_path(
-			implode(PATH_SEPARATOR, array(get_include_path(),
-				realpath(APPLICATION_PATH . '/sections/' . $section->name() . '/library')
+				implode(PATH_SEPARATOR, array(get_include_path(),
+					realpath(APPLICATION_PATH . '/sections/' . $section->name() . '/library')
+						)
 				)
-			)
 		);
 	}
 

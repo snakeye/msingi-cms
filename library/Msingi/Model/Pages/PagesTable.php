@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Model_Pages_PagesTable extends Msingi_Db_Table_Multilanguage
 {
 
@@ -65,7 +69,7 @@ class Msingi_Model_Pages_PagesTable extends Msingi_Db_Table_Multilanguage
 				'can_delete' => 0,
 				'type' => Msingi_Model_Pages_Page::TYPE_REQUEST,
 				'path' => $path,
-				));
+					));
 
 			$page->save();
 		}
@@ -106,8 +110,8 @@ class Msingi_Model_Pages_PagesTable extends Msingi_Db_Table_Multilanguage
 		$dir = array_shift($path);
 
 		$select = $this->select()->where('type = ?', Msingi_Model_Pages_Page::TYPE_PATH)
-			->where('parent_id = ?', $page->id)
-			->where('path = ?', $dir);
+				->where('parent_id = ?', $page->id)
+				->where('path = ?', $dir);
 
 		// fetch page
 		$row = $this->fetchRow($select);
@@ -123,7 +127,7 @@ class Msingi_Model_Pages_PagesTable extends Msingi_Db_Table_Multilanguage
 					'can_delete' => 0,
 					'type' => Msingi_Model_Pages_Page::TYPE_PATH,
 					'path' => $dir,
-					));
+						));
 
 				$row->save();
 			}

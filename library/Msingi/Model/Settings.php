@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Application options
+ * Application settings
  *
  * @package Msingi
  * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>

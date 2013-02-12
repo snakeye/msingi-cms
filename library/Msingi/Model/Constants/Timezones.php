@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Model_Constants_Timezones
 {
 
@@ -53,8 +57,7 @@ class Msingi_Model_Constants_Timezones
 	 * @param type $with_empty
 	 * @return type
 	 */
-	public function getPairs($with_empty = false,
-		$label_field = Msingi_Model_Constants_Timezones::LABEL_NAME)
+	public function getPairs($with_empty = false, $label_field = Msingi_Model_Constants_Timezones::LABEL_NAME)
 	{
 		$pairs = array();
 

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Controller_Action_Helper_Url extends Zend_Controller_Action_Helper_Url
 {
 

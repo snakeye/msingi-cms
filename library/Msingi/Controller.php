@@ -2,6 +2,7 @@
 
 /**
  * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Controller extends Zend_Controller_Action implements Msingi_Translator
 {
@@ -103,9 +104,9 @@ class Msingi_Controller extends Zend_Controller_Action implements Msingi_Transla
 				return false;
 			}
 
-			return  $bootstrap->getResource('Log');
+			return $bootstrap->getResource('Log');
 		}
-		
+
 		return false;
 	}
 

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Base class for frontend controllers
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Controller_Frontend extends Msingi_Controller
 {
 
@@ -27,7 +33,6 @@ class Msingi_Controller_Frontend extends Msingi_Controller
 
 			$texts = $page->getTexts($locale->getLanguage(), true);
 
-			//$this->view->page = $page;
 			$this->view->title = $texts->title;
 			$this->view->meta_keywords = $texts->meta_keywords;
 			$this->view->meta_description = $texts->meta_description;

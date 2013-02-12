@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Updated partial() View Helper for use with themes
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_View_Helper_Partial extends Zend_View_Helper_Partial
 {
 

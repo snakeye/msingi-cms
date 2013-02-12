@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Application resource for cache definition
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Application_Resource_Cache extends Zend_Application_Resource_ResourceAbstract
 {
 

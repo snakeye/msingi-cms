@@ -1,8 +1,15 @@
 <?php
 
+/**
+ * LessCSS compiler
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container_Standalone
 {
 
+	// URL of LessCSS compiler
 	private $_less_js = '//lesscss.googlecode.com/files/less-1.3.0.min.js';
 
 	/**
@@ -18,7 +25,7 @@ class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container
 	}
 
 	/**
-	 *
+	 * headLess() - View Helper method
 	 */
 	public function headLess()
 	{
@@ -26,7 +33,7 @@ class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container
 	}
 
 	/**
-	 * Set URL of less.js script
+	 * Set URL of LessCSS compiler script
 	 *
 	 * @param string $value less.js URL
 	 */
@@ -43,15 +50,17 @@ class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container
 	public function appendStylesheet($url, $inline = true)
 	{
 		$value = (object) array(
-				'url' => $url,
-				'inline' => $inline,
+					'url' => $url,
+					'inline' => $inline,
 		);
 
 		return $this->getContainer()->append($value);
 	}
 
 	/**
+	 * Render HTML elements
 	 *
+	 * @param integer $indent intent
 	 * @return string
 	 */
 	public function toString($indent = null)
@@ -76,7 +85,10 @@ class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container
 	}
 
 	/**
+	 * Render html element
 	 *
+	 * @param mixed $item item to render
+	 * @return string
 	 */
 	public function itemToString($item)
 	{
@@ -140,8 +152,8 @@ class Msingi_View_Helper_HeadLess extends Zend_View_Helper_Placeholder_Container
 	/**
 	 * Remove relative parts from the path
 	 *
-	 * @param unknown_type $path
-	 * @param unknown_type $ps
+	 * @param string $path
+	 * @param string $ps
 	 */
 	function relativePath($path, $ps = DIRECTORY_SEPARATOR)
 	{

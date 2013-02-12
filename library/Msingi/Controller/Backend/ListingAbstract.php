@@ -1,7 +1,10 @@
 <?php
 
-abstract
-class Msingi_Controller_Backend_ListingAbstract extends Msingi_Controller_Backend
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
+abstract class Msingi_Controller_Backend_ListingAbstract extends Msingi_Controller_Backend
 {
 
 	//

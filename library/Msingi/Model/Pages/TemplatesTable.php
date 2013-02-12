@@ -1,7 +1,8 @@
 <?php
 
 /**
- * @package MsingiCms
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Msingi_Model_Pages_TemplatesTable extends Msingi_Db_Table
 {

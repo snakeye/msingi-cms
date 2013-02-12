@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Application_Resource_Log extends Zend_Application_Resource_ResourceAbstract
 {
 
@@ -42,8 +46,8 @@ class Msingi_Application_Resource_Log extends Zend_Application_Resource_Resource
 				else
 				{
 					$format = '%timestamp% %priorityName% (%priority%): %message% ' . PHP_EOL
-						. '%info%' . PHP_EOL
-						. PHP_EOL;
+							. '%info%' . PHP_EOL
+							. PHP_EOL;
 				}
 
 				// set format

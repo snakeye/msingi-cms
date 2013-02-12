@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Filter page tags
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Form_Filter_PageTags implements Zend_Filter_Interface
 {
 
@@ -14,12 +20,12 @@ class Msingi_Form_Filter_PageTags implements Zend_Filter_Interface
 	}
 
 	/**
+	 * Get array of allowed tags
 	 *
-	 * @return type
+	 * @return array of allowed tags
 	 */
 	public function getAllowedTags()
 	{
-		//$this->_allowed_tags = '<p><a><b><i><u><strong><em><br><h1><h2><h3><h4><h5><h6><table><tr><td><th><ul><ol><li><dt><dd><dl><img><hr><span><sub><sup>';
 		return array(
 			'div' => array('class'),
 			'p' => array('class', 'style'),
@@ -49,7 +55,8 @@ class Msingi_Form_Filter_PageTags implements Zend_Filter_Interface
 	}
 
 	/**
-	 * filters not allowed tags and attributes
+	 * Filters not allowed tags and attributes
+	 *
 	 * @see Filter/Zend_Filter_Interface#filter($value)
 	 */
 	public function filter($text)

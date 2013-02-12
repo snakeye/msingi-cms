@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Router for multi-language sections
+ *
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Router_MultiLanguage extends Msingi_Router
 {
 

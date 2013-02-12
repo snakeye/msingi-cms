@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Adapter for Zend_Translator. Uses database as translations storage
+ * 
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Translate_Adapter extends Zend_Translate_Adapter
 {
 

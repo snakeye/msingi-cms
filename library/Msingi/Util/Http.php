@@ -1,8 +1,17 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Util_Http
 {
 
+	/**
+	 *
+	 * @param type $url
+	 * @return type
+	 */
 	public static function build_url($url)
 	{
 		$ret = '';

@@ -2,6 +2,7 @@
 
 /**
  * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 abstract class Msingi_Router extends Zend_Controller_Router_Rewrite
 {

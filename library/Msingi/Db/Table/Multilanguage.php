@@ -1,7 +1,12 @@
 <?php
 
+/**
+ * @package Msingi
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Msingi_Db_Table_Multilanguage extends Msingi_Db_Table
 {
+
 	/**
 	 *
 	 * @return string
