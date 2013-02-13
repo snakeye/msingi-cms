@@ -1,1 +1,16 @@
-<?= $this->layout()->content ?>
+<?= $this->doctype() ?>
+<html lang="<?= $this->language() ?>">
+	<head>
+		<?= $this->headMeta(); ?>
+		<?= $this->headTitle(); ?>
+		<?= $this->headLink(); ?>
+		<?= $this->headLess(); ?>
+		<?= $this->headStyle(); ?>
+		<?= $this->headScript(); ?>
+	</head>
+	<body class="login">
+		<div class="container" id="content">
+			<?= $this->layout()->content ?>
+		</div>
+	</body>
+</html>

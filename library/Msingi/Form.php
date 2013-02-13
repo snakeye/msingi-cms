@@ -4,13 +4,13 @@
  * @package Msingi
  * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
-class Msingi_Form extends Zend_Form implements Msingi_Translator
+class Msingi_Form extends Zend_Form implements Msingi_Translator_Interface
 {
-
+	// locale
 	protected $_locale;
 
 	/**
-	 *
+	 * Form initialization
 	 */
 	public function init()
 	{
@@ -18,8 +18,9 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 	}
 
 	/**
+	 * Override setAction function to handle multi-language sections
 	 *
-	 * @param type $action
+	 * @param string $action
 	 */
 	public function setAction($action)
 	{
@@ -31,6 +32,7 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 	}
 
 	/**
+	 * Populate for with values
 	 *
 	 * @param type $values
 	 */
@@ -47,8 +49,9 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 	}
 
 	/**
+	 * Get current language
 	 *
-	 * @return string
+	 * @return string language
 	 */
 	public function language()
 	{
@@ -60,7 +63,7 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 	}
 
 	/**
-	 *
+	 * Get current locale
 	 * @return type
 	 */
 	public function locale()
@@ -70,6 +73,7 @@ class Msingi_Form extends Zend_Form implements Msingi_Translator
 			if (Zend_Registry::isRegistered('Zend_Locale'))
 				$this->_locale = Zend_Registry::get('Zend_Locale');
 		}
+		
 		return $this->_locale;
 	}
 

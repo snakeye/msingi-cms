@@ -1,8 +1,14 @@
 <?php
 
-class Form_Login extends Msingi_Form
+/**
+ * @package MsingiCms
+ */
+class Form_Login extends Msingi_Form_Linear
 {
 
+	/**
+	 * Initialize form
+	 */
 	public function init()
 	{
 		$this->setAction('/login');
@@ -10,7 +16,7 @@ class Form_Login extends Msingi_Form
 
 		$back = $this->createElement('hidden', 'back', array(
 			'filters' => array('StringTrim'),
-			));
+				));
 
 		$username = $this->createElement('text', 'username', array(
 			'label' => $this->_('Username'),
@@ -19,7 +25,7 @@ class Form_Login extends Msingi_Form
 			'required' => true,
 			'class' => 'required',
 			'size' => 30,
-			));
+				));
 
 		$password = $this->createElement('password', 'password', array(
 			'label' => $this->_('Password'),
@@ -28,11 +34,12 @@ class Form_Login extends Msingi_Form
 			'required' => true,
 			'class' => 'required',
 			'size' => 15
-			));
+				));
 
 		$submit = $this->createElement('submit', 'submit', array(
 			'label' => $this->_('Login'),
-			));
+			'class' => 'btn btn-primary',
+				));
 
 		$this->addElements(array($back, $username, $password, $submit));
 	}

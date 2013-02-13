@@ -1,9 +1,0 @@
-<ul class="box">
-	<?php foreach ($this->container as $page) : ?>
-		<?php if ($page->getHref() != '#') : ?>
-			<li <?php if ($page->isActive(true)) echo 'class="menu-active"' ?>>
-				<a href="<?= $page->getHref() ?>"><span><?= $page->getLabel() ?></span></a>
-			</li>
-		<?php endif; ?>
-	<?php endforeach; ?>
-</ul>

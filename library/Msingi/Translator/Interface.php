@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Interface for objects supporting authomated translation
+ *
  * @package Msingi
  * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */

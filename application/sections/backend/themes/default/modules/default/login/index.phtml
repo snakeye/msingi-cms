@@ -1,1 +1,12 @@
-<?= $this->form ?>
+<div id="form-login">
+	<div class="form-header">
+		<?= $this->_s('%s Administration', $this->_('#site-name')) ?>
+	</div>
+
+	<?= $this->form ?>
+
+	<div class="form-footer">
+		<hr class="line" />
+		<a href="<?= $this->section('frontend') ?>"><?= $this->_('Return back to homepage') ?></a>
+	</div>
+</div>
