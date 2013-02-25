@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package MsingiCms
+ */
+
 define('PUBLIC_PATH', realpath(dirname(__FILE__)));
 define('ROOT_PATH', realpath(dirname(__FILE__) . '/../'));
 define('LIBRARY_PATH', realpath(ROOT_PATH . '/library'));

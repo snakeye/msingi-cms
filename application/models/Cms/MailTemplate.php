@@ -1,7 +1,8 @@
 <?php
 
 /**
- *
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Cms_MailTemplate extends Msingi_Db_Table_Row_Multilanguage
 {
@@ -14,7 +15,6 @@ class Cms_MailTemplate extends Msingi_Db_Table_Row_Multilanguage
 	{
 		parent::setFromArray($data);
 
-		//$languages = Msingi_Application_Settings::getInstance()->getArray('multilanguage:languages');
 		$languages = Msingi_Application_Settings::getInstance()->getArray('section:frontend:languages:enabled');
 
 		foreach ($languages as $lang)

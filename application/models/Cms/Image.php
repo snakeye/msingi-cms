@@ -2,6 +2,7 @@
 
 /**
  * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Cms_Image extends Msingi_Db_Table_Row
 {

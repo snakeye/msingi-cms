@@ -1,8 +1,17 @@
 <?php
 
+/**
+ * Blog/news RSS controller
+ *
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Feed_RssController extends Msingi_Controller
 {
 
+	/**
+	 * Index action
+	 */
 	public function indexAction()
 	{
 		$this->_helper->layout()->disableLayout();

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Cms_File extends Msingi_Db_Table_Row
 {
 
@@ -36,7 +40,7 @@ class Cms_File extends Msingi_Db_Table_Row
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public function delete()
 	{

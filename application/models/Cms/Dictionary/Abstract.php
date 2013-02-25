@@ -4,12 +4,14 @@
  * Abstract class for user defined dictionaries
  *
  * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 abstract class Cms_Dictionary_Abstract extends Cms_Dictionaries
 {
 
 	protected $_dictionary = array();
 
+	// get dictionary type
 	abstract protected function _getType();
 
 	/**

@@ -13,15 +13,6 @@ class Msingi_View extends Zend_View implements Msingi_Translator_Interface
 
 	/**
 	 *
-	 * @param type $config
-	 */
-	public function __construct($config = array())
-	{
-		parent::__construct($config);
-	}
-
-	/**
-	 *
 	 * @return string
 	 */
 	public function language()

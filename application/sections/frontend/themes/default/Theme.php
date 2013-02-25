@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Theme initialization
+ *
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class ThemeDefault
 {
 
@@ -21,8 +27,10 @@ class ThemeDefault
 
 		// bootstrap
 		$view->headLink()->appendStylesheet($view->assets() . '/bootstrap/css/bootstrap.min.css');
+		$view->headLink()->appendStylesheet($view->assets() . '/bootstrap/css/bootstrap-responsive.min.css');
 		$view->headScript()->appendFile($view->assets() . '/bootstrap/js/bootstrap.js');
 
+		// theme styles
 		$view->headLess()->appendStylesheet($view->assets() . '/css/style.less');
 
 		return $view;

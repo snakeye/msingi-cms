@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Widgets - blocks of text used across different pages
+ *
+ * @package MsingiCms
+ */
 class Cms_Widgets extends Msingi_Db_Table_Multilanguage
 {
 
@@ -9,7 +14,8 @@ class Cms_Widgets extends Msingi_Db_Table_Multilanguage
 	//protected $_dependentTables = array('Widgets_Texts');
 
 	/**
-	 *
+	 * Fetch widget
+	 * 
 	 * @param string $position
 	 * @param boolean $create
 	 * @return Cms_Widget

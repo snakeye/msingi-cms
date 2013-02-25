@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Language related constants
+ *
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Cms_Constants_Languages
 {
 
@@ -7,17 +13,17 @@ class Cms_Constants_Languages
 	const LABEL_NATIVE_NAME = 'native_name';
 	const LABEL_LONG = 'long';
 
-	//
+	// shared constants values
 	protected static $s_values;
 	//
 	protected $_values;
 
 	/**
-	 *
+	 * Default constructor
 	 */
 	public function __construct()
 	{
-		$class = get_class($this);
+		$class = get_called_class($this);
 
 		// do we have stored categories for this class?
 		if (!isset(self::$s_values[$class]))
@@ -35,9 +41,10 @@ class Cms_Constants_Languages
 	}
 
 	/**
+	 * Check if we have labels in required language
 	 *
-	 * @param type $code
-	 * @return type
+	 * @param string $code language code
+	 * @return boolean
 	 */
 	public function isLanguage($code)
 	{
@@ -45,8 +52,9 @@ class Cms_Constants_Languages
 	}
 
 	/**
+	 * Get values
 	 *
-	 * @return array
+	 * @return array of values
 	 */
 	protected function _getValues()
 	{
@@ -159,8 +167,9 @@ class Cms_Constants_Languages
 	/**
 	 * Overrides base function with native names result
 	 *
-	 * @param type $with_empty
-	 * @return type
+	 * @param boolean $with_empty include empty value
+	 * @param string $label_field take label from this field
+	 * @return array
 	 */
 	public function getPairs($with_empty = false, $label_field = Msingi_Model_Languages::LABEL_NAME)
 	{
@@ -176,21 +185,24 @@ class Cms_Constants_Languages
 			switch ($label_field)
 			{
 				case Msingi_Model_Languages::LABEL_NAME:
+					// take label from name field
 					$label = $cat['name'];
 					break;
 				case Msingi_Model_Languages::LABEL_NATIVE_NAME:
+					// take label from native name
 					$label = $cat['native_name'];
 					break;
 				case Msingi_Model_Languages::LABEL_LONG:
+					// generate long label from name and native name
 					$name = $cat['name'];
-					$nname = $cat['native_name'];
-					if ($name == $nname)
+					$native_name = $cat['native_name'];
+					if ($name == $native_name)
 					{
 						$label = $name;
 					}
 					else
 					{
-						$label = $name . ' (' . $nname . ')';
+						$label = $name . ' (' . $native_name . ')';
 					}
 					break;
 			}
@@ -201,8 +213,10 @@ class Cms_Constants_Languages
 	}
 
 	/**
+	 * Get language name
 	 *
-	 * @param type $code
+	 * @param string $code language code
+	 * @return string language name
 	 */
 	public function getName($code)
 	{
@@ -210,9 +224,10 @@ class Cms_Constants_Languages
 	}
 
 	/**
+	 * Get language flag code
 	 *
-	 * @param string $code
-	 * @return string
+	 * @param string $code language code
+	 * @return string flag code
 	 */
 	public function getFlag($code)
 	{
@@ -220,6 +235,7 @@ class Cms_Constants_Languages
 	}
 
 	/**
+	 * Get values as array
 	 *
 	 * @return array
 	 */

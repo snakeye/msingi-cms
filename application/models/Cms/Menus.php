@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Cms_Menus extends Msingi_Db_Table_Multilanguage
 {
 
@@ -7,7 +11,7 @@ class Cms_Menus extends Msingi_Db_Table_Multilanguage
 
 	/**
 	 *
-	 * @return type
+	 * @return array
 	 */
 	public function fetchArray()
 	{

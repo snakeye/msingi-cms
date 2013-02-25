@@ -2,6 +2,7 @@
 
 /**
  * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Cms_MenuItem extends Msingi_Db_Table_Row_Multilanguage
 {

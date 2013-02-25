@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class Cms_Widget extends Msingi_Db_Table_Row_Multilanguage
 {
 

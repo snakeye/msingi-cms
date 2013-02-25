@@ -5,6 +5,7 @@
  * id - type - name
  *
  * @package MsingiCms
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
  */
 class Cms_Dictionaries extends Msingi_Db_Table
 {

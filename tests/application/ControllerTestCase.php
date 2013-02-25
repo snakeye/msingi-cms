@@ -2,6 +2,10 @@
 
 require_once 'Zend/Test/PHPUnit/ControllerTestCase.php';
 
+/**
+ * @package MsingiTests
+ * @author Andrey Ovcharov <andrew.ovcharov@gmail.com>
+ */
 class ControllerTestCase extends Zend_Test_PHPUnit_ControllerTestCase
 {
 
