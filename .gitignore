@@ -8,3 +8,5 @@ public/backend/gebo
 public/frontend/nevia
 application/sections/backend/themes/gebo
 application/sections/frontend/themes/nevia
+._*
+.DS_Store
